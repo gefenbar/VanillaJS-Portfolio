@@ -4,6 +4,8 @@ body {
     overflow-x: hidden;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace !important;
     background-color: #0a192f;
+    /* background: fixed url("images/bg_space.jpg"); */
+    /* background-size: cover; */
 }
 
 html {
@@ -47,12 +49,10 @@ li {
 }
 
 #logo {
-    width: 5%;
-    height: inherit;
+    width: 90px;
+    height: 60px;
 }
 
-/* main nav bar */
-/* HERO start */
 #hero {
     width: 70%;
     margin-left: 15%;
@@ -80,7 +80,7 @@ li {
     color: #8892b0;
     font-weight: 500;
     font-size: 50px;
-    margin-top: -30px;
+    margin-top: -40px;
     margin-left: -2px;
 }
 
@@ -100,21 +100,38 @@ li {
     background-color: transparent;
     border: #64ffda solid 1px;
     padding: 1em;
+    visibility: hidden
 }
 
 #button_on_hero:hover {
     background-color: #64ffda;
     color: #0a192f;
-
 }
 
-/* HERO end */
 
-/* PROJECTS start */
-#projects_section {
+
+
+@keyframes typing {
+    from {
+        width: 0;
+        border-right: .15em solid #8892b0;
+    }
+
+    to {
+        width: 100%;
+
+    }
+}
+
+
+#projects {
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
+}
+
+#projects_section {
+
     color: #64ffda;
     height: 80vh;
     font-size: 30px;
@@ -152,9 +169,6 @@ li {
     transform: scale(0.8);
 }
 
-/* PROJECTS end */
-
-/* three cols container */
 #skills_section {
     color: #64ffda;
     height: 100vh;
@@ -167,7 +181,6 @@ li {
 }
 
 #skills {
-    /* margin-top: -4px; */
     width: 70%;
     text-align: center;
     margin-left: 15%;
@@ -194,26 +207,24 @@ li {
     border-radius: 50%;
     background: #8892b0;
     overflow: hidden;
-    animation: fill ease-in-out 3s;
 }
 
-@keyframes fill {
-    0% {
-        transform: rotate(0deg);
-        background-color: #64ffda;
-    }
+@keyframes bounce {
 
+    0%,
     100% {
-        transform: rotate(360deg);
-        background-color: #8892b0;
+        transform: translate(0px, 0px);
+    }
 
+    50% {
+        transform: translate(0px, 3px);
     }
 }
 
-/* three cols container */
+#about_me_section {}
 
 #about_me_container {
-    height: 80vh;
+    height: 90vh;
     display: flex;
     text-align: center;
     margin-left: 15%;
@@ -223,7 +234,6 @@ li {
 }
 
 #about_me_text {
-    /* background-color: turquoise; */
     width: 63%;
     text-align: left;
     padding: 3%;
@@ -252,6 +262,10 @@ li {
 #about_me_image:hover {
     filter: drop-shadow(4px 4px 12px #64ffda) brightness(1);
     opacity: 85%;
+}
+
+#experience_section {
+    height: 80vh;
 }
 
 #experience {
@@ -287,23 +301,19 @@ li {
 
 }
 
-/* @keyframes colors{
-     
-    from{  
-        filter: invert(2322%) sepia(232%) saturate(93%) hue-rotate(13deg) brightness(2433%) contrast(22%);
-  }
-    to{
-        filter: invert(232%) sepia(224%) saturate(93233%) hue-rotate(123deg) brightness(222%) contrast(22%); 
-
-    }
+.expand_arrow {
+    margin-bottom: 0;
 }
-@keyframes hideshow {
-0% { opacity: 1; }
-25% { opacity: 0.8; }
-50% { opacity: 0.4; }
-75% { opacity: 0.8; }
-100% { opacity: 1; }
-} */
+
+summary:nth-child(1) {
+    margin-left: 10px !important;
+    color: #64ffda;
+    cursor: pointer;
+}
+
+summary:nth-child(1):hover {
+    color: #8892b0;
+}
 
 #social_icons {
     position: fixed;
@@ -331,36 +341,19 @@ li {
 
 
 .hidden {
-    /* background-color: #0a192f !important; */
     opacity: 0;
-    /* transform: translateX(100%); */
-    transition: all 3s;
-
+    padding-top: 2%;
+    transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
 .show {
     opacity: 1;
-    transition: all 3s;
-    /* transform: translateX(0%); */
+    /* padding-top: 0%; */
+    /* transition: all 2s steps(10) */
+
 }
 
-
-
 @media (min-width: 900px) {
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    text,
-    span {
-        /* font-size: 250% !important; */
-    }
-
-
     #social_icons img {
         width: 40px;
         height: 40px;
@@ -373,6 +366,7 @@ li {
 
     .footer {
         font-size: 40% !important;
+
     }
 
     #copyright {
@@ -422,7 +416,7 @@ li {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 
-    padding: 0px 20px 20px 20px;
+    padding: 0px 50px 0px 50px;
 }
 
 .footer .col h1 {
@@ -551,6 +545,9 @@ li {
 }
 
 @media only screen and (max-width: 755px) {
+  
+
+
     #nav {
         font-size: 15px;
         height: 5%;
@@ -558,7 +555,7 @@ li {
 
     #logo {
         height: 100%;
-        width: 30px;
+        width: 60px;
     }
 
     #about_me_container {
