@@ -54,6 +54,8 @@ var writer_delay = 114
 function ShowButton() {
   document.getElementById('button_on_hero').style.visibility = "visible"
 }
+
+
 function TypeWriter(target, text, delay, clearText = false) {
   if (target.textContent === text) {
     return;
@@ -76,5 +78,14 @@ function TypeWriter(target, text, delay, clearText = false) {
         }, writer_delay)
       }
     }, _delay);
+  }
+}
+
+function MobileNav() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
 }

@@ -28,6 +28,9 @@ body {
     font-size: 20px;
     background-color: #0a192f;
 }
+.nav_mobile{
+    display: none;
+}
 
 a {
     color: #64ffda;
@@ -415,6 +418,63 @@ summary:nth-child(1) {
 }
 
 @media only screen and (max-width: 755px) {
+    /* mobile nav */
+    /* Style the navigation menu */
+.nav_mobile {
+    overflow: hidden;
+    background-color: rgb(225, 2, 2);
+    position: relative;
+    display: block;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .nav_mobile #myLinks {
+    display: none;
+  }
+  /* .nav_mobile  img{display: none;} */
+  
+  /* Style navigation menu links */
+  .nav_mobile a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .nav_mobile a.icon {
+    background: #0a192f;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  /* .nav_mobile a:hover {
+    background-color: #ddd;
+    color: black;
+  } */
+  #logo_mobile{
+    display: block;
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 0; */
+    width:50px;
+    height: 40px;
+    margin-top: -10px;
+    /* display: non; */
+    
+  }
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #0a192f;
+    color: white;
+  }
+
+  
+  /* footer 1 col */
     .footer .col {
         width: 100% !important;
         float: none !important;
@@ -422,9 +482,10 @@ summary:nth-child(1) {
 
     #nav {
         display: none;
-        font-size: 15px;
-        height: 5%;
     }
+    /* #nav_mobile{
+        display: flex;
+    } */
 
     #about_me_container {
         width: 100%;

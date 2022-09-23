@@ -8,12 +8,14 @@
     <title>My Website</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
     <div id="nav">
         <img id="logo" src="images/logo.png" alt="logo">
-
         <ul>
             <li id="nav_home"> <a href="#hero_section">Home</a></li>
             <li id="nav_contact"> <a href="#projects_section">Projects</a></li>
@@ -21,6 +23,21 @@
             <li id="nav_articles"> <a href="#about_me_section">About me</a></li>
             <li id="nav_experience"> <a href="#experience_section">Experience</a></li>
         </ul>
+    </div>
+
+    <!-- Top Navigation Menu -->
+    <div class="nav_mobile">
+        <a  href="#hero_section" class="active"><img id="logo_mobile" src="images/logo.png" alt="logo"></a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="#hero_section">Home</a>
+            <a href="#projects_section">Projects</a>
+            <a href="#skills_section">Skills</a>
+            <a href="#about_me_section">About me</a>
+            <a href="#experience_section">Experience</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="MobileNav()"> &zwnj; <i class="fa fa-bars"></i></a>
     </div>
     <span id="social_icons">
         <a href="https://www.linkedin.com/in/gefen-bar-software-developer/" target="_blank"><img
@@ -44,12 +61,16 @@
     <section id="projects_section" class="hidden">
         <h1>Projects</h1>
         <div class="projects">
-            <button type="button" onclick="window.location.href='https://github.com/gefenbar/Python_TicTacToe';" >Tic Tac<br>Toe</button>
-            <button type="button" onclick="window.location.href='https://github.com/gefenbar/custom-website';" > Custom<br>Website </button>
+            <button type="button" onclick="window.location.href='https://github.com/gefenbar/Python_TicTacToe';">Tic
+                Tac<br>Toe</button>
+            <button type="button" onclick="window.location.href='https://github.com/gefenbar/custom-website';">
+                Custom<br>Website </button>
         </div>
         <div class="projects">
-            <button type="button" target="_blank" onclick="window.location.href='https://github.com/gefenbar/Kiosk';" >Food<br>Order</button>
-            <button type="button" onclick="window.location.href='https://github.com/gefenbar/Prototype5';" >Unity<br>Game</button>
+            <button type="button" target="_blank"
+                onclick="window.location.href='https://github.com/gefenbar/Kiosk';">Food<br>Order</button>
+            <button type="button"
+                onclick="window.location.href='https://github.com/gefenbar/Prototype5';">Unity<br>Game</button>
         </div>
     </section>
     <section id="skills_section" class="hidden">
@@ -181,12 +202,13 @@
                 <div class="col social">
                     <h1>contact</h1>
                     <ul class="footer_social">
-                        <li><a href="https://www.linkedin.com/in/gefen-bar-software-developer/" target="_blank"><img src="images/SVG/linkedin_logo.svg"
-                                alt="linkedin icon" height="32" width="32"></a></li>
+                        <li><a href="https://www.linkedin.com/in/gefen-bar-software-developer/" target="_blank"><img
+                                    src="images/SVG/linkedin_logo.svg" alt="linkedin icon" height="32" width="32"></a>
+                        </li>
                         <li><a href="https://wa.me/972502001376" target="_blank"><img src="images/SVG/whatsapp_logo.svg"
-                                alt="whatsapp icon" width="32"></a></li>
+                                    alt="whatsapp icon" width="32"></a></li>
                         <li><a href="mailto:gefenbar003@gmail.com" target="_blank"><img src="images/SVG/email_logo.svg"
-                                alt="email icon" width="32"></a></li>
+                                    alt="email icon" width="32"></a></li>
                     </ul>
                 </div>
                 <div class="col">
