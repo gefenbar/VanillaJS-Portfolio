@@ -249,7 +249,7 @@ li {
 }
 
 #about_me_image {
-    background-image: url(images/face_painted.png);
+    background-image: url(images/cartoon.png);
     background-position: 70% 20%;
     background-repeat: no-repeat;
     background-size: 17vw 30vh;
@@ -545,8 +545,6 @@ summary:nth-child(1):hover {
 }
 
 @media only screen and (max-width: 755px) {
-  
-
 
     #nav {
         font-size: 15px;
