@@ -49,7 +49,7 @@ TypeWriter(type_first, text_first, 100)
 setTimeout(function () { TypeWriter(type_second, text_second, 100) }, 1600)
 setTimeout(function () { TypeWriter(type_third, text_third, 100) }, 3000)
 setTimeout(function () { TypeWriter(type_fourth, text_fourth, 60) }, 5700)
-setTimeout(ShowButton, 16000)
+setTimeout(ShowButton, 12000)
 var writer_delay = 114
 function ShowButton() {
   document.getElementById('button_on_hero').style.visibility = "visible"
@@ -73,7 +73,7 @@ function TypeWriter(target, text, delay, clearText = false) {
         setTimeout(function () {
           target.textContent = target.textContent.replace("|", text[i])
           if (target == type_fourth) {
-            writer_delay -= 1
+            writer_delay -= 6
           }
         }, writer_delay)
       }
