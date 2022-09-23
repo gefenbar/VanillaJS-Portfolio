@@ -452,20 +452,12 @@ summary:nth-child(1) {
     top: 0;
   }
   
-  /* Add a grey background color on mouse-over */
-  /* .nav_mobile a:hover {
-    background-color: #ddd;
-    color: black;
-  } */
   #logo_mobile{
     display: block;
-    /* position: absolute; */
-    /* left: 0; */
-    /* top: 0; */
     width:50px;
     height: 40px;
     margin-top: -10px;
-    /* display: non; */
+    margin-left:-15px
     
   }
   /* Style the active link (or home/logo) */
