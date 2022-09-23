@@ -461,8 +461,7 @@ a:hover {
     }
 
     #projects_section {
-        height: 80vh;
-    }
+        margin-top: 1vh;    }
 }
 
 @media only screen and (max-width: 603px) {
