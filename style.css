@@ -131,7 +131,6 @@ li {
 }
 
 #projects_section {
-
     color: #64ffda;
     height: 80vh;
     font-size: 30px;
@@ -462,7 +461,7 @@ a:hover {
     }
 
     #projects_section {
-        height: 60vh;
+        height: 80vh;
     }
 }
 
