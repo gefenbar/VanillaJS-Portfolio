@@ -310,7 +310,8 @@ summary:nth-child(1) {
     cursor: pointer;
 }
 
-summary:nth-child(1):hover {
+summary:nth-child(1):hover summary:nth-child(1):active
+    {
     color: #8892b0;
 }
 
@@ -333,7 +334,7 @@ summary:nth-child(1):hover {
 
 }
 
-#social_icons img:hover {
+#social_icons img:hover,#social_icons img:active {
     filter: blur(1px);
 }
 
@@ -469,7 +470,7 @@ summary:nth-child(1):hover {
     }
 }
 
-@media(hover: hover) and (pointer: fine) {
+/* @media(hover: hover) and (pointer: fine) {
 
     summary:nth-child(1):hover {
         color: #8892b0;
@@ -478,7 +479,7 @@ summary:nth-child(1):hover {
     #social_icons img:hover {
         filter: blur(1px);
     }
-}
+} */
 
 
 
