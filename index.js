@@ -89,3 +89,8 @@ function MobileNav() {
     x.style.display = "block";
   }
 }
+
+  x=document.querySelectorAll('#myLinks a')
+  x.forEach(el=>el.addEventListener('click',()=>{
+    var y = document.getElementById("myLinks").style.display="none"
+}))
