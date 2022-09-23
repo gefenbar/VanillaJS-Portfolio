@@ -389,13 +389,6 @@ summary:nth-child(1):hover {
         display: none;
     }
 
-    summary:nth-child(1):hover {
-        color: #64ffda;
-    }
-
-    #social_icons img:hover {
-        filter: blur(0px);
-    }
 
     .skills_section {
         height: 75vh;
@@ -476,7 +469,16 @@ summary:nth-child(1):hover {
     }
 }
 
+@media(hover: hover) and (pointer: fine) {
 
+    summary:nth-child(1):hover {
+        color: #64ffda;
+    }
+
+    #social_icons img:hover {
+        filter: blur(0px);
+    }
+}
 
 
 
