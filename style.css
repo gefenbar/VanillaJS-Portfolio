@@ -429,9 +429,9 @@ summary:nth-child(1) {
         height: 120vh;
     }
     #projects_section {
-        /* margin-top: 3vh; */
-        /* margin-bottom: -2vh; */
-        height: 120vh;
+        margin-top: 3vh;
+        margin-bottom: -2vh;
+        /* height: 120vh; */
     }
     .skills_section {
         /* height: 75vh; */
