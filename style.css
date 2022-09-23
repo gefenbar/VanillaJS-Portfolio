@@ -535,7 +535,15 @@ filter:invert(86%) sepia(102%) saturate(2397%) hue-rotate(440deg) brightness(100
 }
 
 @media only screen and (max-width: 755px) {
-   
+    .skills_section{height: 85vh;}
+    .circle {
+        width:125px;
+        height: 125px;
+            }
+            .circle img{
+                width:62px;
+                height: 125px;
+                    }
     #nav {
         font-size: 15px;
         height: 5%;
@@ -568,15 +576,8 @@ filter:invert(86%) sepia(102%) saturate(2397%) hue-rotate(440deg) brightness(100
 }
 
 @media only screen and (max-width: 603px) {
-    .skills_section{height: 85vh;}
-    .circle {
-        width:100px;
-        height: 100px;
-            }
-            .circle img{
-                width:42px;
-                height: 103px;
-                    }
+   
+            
     #nav {
         font-size: 10px;
         height: 3%;
