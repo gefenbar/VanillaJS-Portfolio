@@ -310,8 +310,7 @@ summary:nth-child(1) {
     cursor: pointer;
 }
 
-summary:nth-child(1):hover summary:nth-child(1):active
-    {
+summary:nth-child(1):hover {
     color: #8892b0;
 }
 
@@ -334,7 +333,7 @@ summary:nth-child(1):hover summary:nth-child(1):active
 
 }
 
-#social_icons img:hover,#social_icons img:active {
+#social_icons img:hover {
     filter: blur(1px);
 }
 
@@ -470,7 +469,7 @@ summary:nth-child(1):hover summary:nth-child(1):active
     }
 }
 
-/* @media(hover: hover) and (pointer: fine) {
+ @media(any-pointer: coarse){
 
     summary:nth-child(1):hover {
         color: #8892b0;
@@ -479,7 +478,7 @@ summary:nth-child(1):hover summary:nth-child(1):active
     #social_icons img:hover {
         filter: blur(1px);
     }
-} */
+}
 
 
 
