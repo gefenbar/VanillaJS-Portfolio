@@ -285,15 +285,17 @@ li {
     margin-top: 0px;
 }
 
-#experience div h1 {
+#experience div h2 {
     font-size: 24px;
-    color: #64ffda;
-}
-
-#experience h2 {
-    font-size: 19px;
     color: #ccd6f6;
 }
+
+#experience h3 {
+    font-size: 19px;
+    color: #8892b0;
+}
+
+
 
 #experience p {
     font-size: 17px;
@@ -307,13 +309,9 @@ li {
 
 summary:nth-child(1) {
     margin-left: 10px !important;
-    color: #64ffda;
+    color: #8892b0;
     cursor: pointer;
 }
-
-/* summary:nth-child(1):hover {
-    color: #8892b0;
-} */
 
 #social_icons {
     position: fixed;
@@ -334,9 +332,6 @@ summary:nth-child(1) {
 
 }
 
-/* #social_icons img:hover {
-    filter: blur(1px);
-} */
 
 
 
@@ -431,10 +426,8 @@ summary:nth-child(1) {
     #projects_section {
         margin-top: 5vh;
         margin-bottom: -20vh;
-        /* height: 120vh; */
     }
     .skills_section {
-        /* height: 75vh; */
         height: 120vh;
     }
   
@@ -545,7 +538,7 @@ summary:nth-child(1) {
     font-size: 12px;
     line-height: 17px;
     padding: 20px 0px 5px 0px;
-    color: white;
+    color: #ccd6f6;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.250em;
@@ -585,10 +578,6 @@ summary:nth-child(1) {
 
 }
 
-/* 
-.footer a:hover {
-    color: white !important;
-} */
 
 .clearfix {
     clear: both;
