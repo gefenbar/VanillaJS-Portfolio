@@ -1,4 +1,3 @@
-// document.getElementById('homepage_video').play();
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -30,15 +29,12 @@ details.forEach((targetDetail) => {
 window.onload = pageLoaded;
 function pageLoaded() {
 
-  // lines.forEach(x=>{  setTimeout(typeWriter(x), 1000);
-  // })
 }
 // var audio = document.createElement("AUDIO")
 // document.addEventListener("click", () => {document.body.appendChild(audio)         
 //   audio.play()
 // }  )
 // audio.src = "mp3/writer.wav"
-
 var text_first = "Hi, my name is"
 var text_second = "Gefen Bar."
 var text_third = "I'm a Software Developer."

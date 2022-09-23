@@ -87,7 +87,7 @@ li {
 #h4_on_hero {
     color: #8892b0;
     font-weight: 400;
-    font-size: 20px !important;
+    font-size: 20px;
     margin-top: -30px;
 
 }
@@ -96,7 +96,7 @@ li {
     color: #64ffda;
     width: 15%;
     font-weight: 100;
-    font-size: 14px !important;
+    font-size: 14px;
     background-color: transparent;
     border: #64ffda solid 1px;
     padding: 1em;
@@ -221,7 +221,6 @@ li {
     }
 }
 
-#about_me_section {}
 
 #about_me_container {
     height: 90vh;
@@ -359,7 +358,7 @@ summary:nth-child(1):hover {
         height: 40px;
     }
 
-    #footer_social img {
+    .footer_social img {
         width: 32px;
         height: 32px;
     }
@@ -405,7 +404,9 @@ summary:nth-child(1):hover {
     background-color: #0a192f;
     border-top: solid 2px #8892b0;
 }
-
+.footer_social{
+filter:invert(86%) sepia(102%) saturate(2397%) hue-rotate(440deg) brightness(100%) contrast(129%);
+}
 
 .footer .col {
 
@@ -510,7 +511,8 @@ summary:nth-child(1):hover {
 
 @media only screen and (max-width: 500px) {
     .footer .col img {
-        width: 40%;
+        width: 20px;
+        height: 20px;
     }
 
     .footer .col h1 {
@@ -518,7 +520,7 @@ summary:nth-child(1):hover {
     }
 
     .footer .col ul li {
-        font-size: 20%;
+        font-size: 50%;
     }
 
 }
@@ -530,18 +532,6 @@ summary:nth-child(1):hover {
     #nav {
         font-size: 18px;
     }
-
-    /* h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    text,
-    span {
-        font-size: 200% !important;
-    } */
 }
 
 @media only screen and (max-width: 755px) {
@@ -558,7 +548,7 @@ summary:nth-child(1):hover {
 
     #about_me_container {
         width: 100%;
-        height: auto;
+        height: 120vh;
     }
 
     #about_me_text {
@@ -567,6 +557,13 @@ summary:nth-child(1):hover {
 
     #about_me_image {
         display: none;
+    }
+
+    #experience_section {
+        height: 120vh;
+    }
+    #projects_section{
+        height: 60vh;
     }
 }
 
@@ -586,8 +583,7 @@ summary:nth-child(1):hover {
         font-size: 45%;
         height: 2.5%;
     }
-
-    #experience_section {
-        height: 120vh;
+    .projects button {
+        font-size: 60%;
     }
 }
