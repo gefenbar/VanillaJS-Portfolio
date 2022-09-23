@@ -415,8 +415,8 @@ summary:nth-child(1) {
 
 @media only screen and (max-width: 755px) {
     .footer .col {
-        width: 100%!important;
-        float: none!important;
+        width: 100% !important;
+        float: none !important;
     }
 
     #nav {
@@ -613,16 +613,6 @@ summary:nth-child(1) {
     }
 }
 
-@media only screen and (max-width: 950px) {
-    .footer .col h1 {
-        font-size: 14px;
-    }
-
-    .footer .col ul li {
-        font-size: 13px;
-    }
-
-}
 
 @media only screen and (max-width: 500px) {
     .footer .col img {
