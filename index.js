@@ -92,5 +92,9 @@ function MobileNav() {
 
   x=document.querySelectorAll('#myLinks a')
   x.forEach(el=>el.addEventListener('click',()=>{
-    var y = document.getElementById("myLinks").style.display="none"
+  document.getElementById("myLinks").style.display="none"
 }))
+
+
+// circles=document.querySelectorAll('.circle')
+// circles.forEach(el=>el.style.marginBottom="10vh")

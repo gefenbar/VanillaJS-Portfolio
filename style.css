@@ -208,7 +208,7 @@ li {
     position: relative;
     width: 150px;
     height: 150px;
-    margin: 0.5rem;
+    margin: 0.5rem  2rem 0.5rem;
     border-radius: 50%;
     background: #8892b0;
     overflow: hidden;
