@@ -204,7 +204,7 @@ li {
     font-size: 50%;
 }
 
-.circle {
+.circle-odd, .circle-even {
     position: relative;
     width: 150px;
     height: 150px;
@@ -214,7 +214,7 @@ li {
     overflow: hidden;
 }
 
-@keyframes bounce {
+@keyframes bounceUp {
 
     0%,
     100% {
@@ -223,6 +223,17 @@ li {
 
     50% {
         transform: translate(0px, 3px);
+    }
+}
+@keyframes bounceDown {
+
+    0%,
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, -3px);
     }
 }
 
@@ -502,14 +513,14 @@ summary:nth-child(1) {
         height: 120vh;
     }
 
-    .circle {
-        width: 125px;
-        height: 125px;
+    .circle-odd,.circle-even {
+        width: 110px;
+        height: 110px;
     }
 
-    .circle img {
+    .circle-odd img,.circle-even img {
         width: 62px;
-        height: 125px;
+        height: 110px;
     }
 
     #logo {
@@ -561,6 +572,9 @@ summary:nth-child(1) {
     .projects button {
         font-size: 60%;
     }
+    .circle-odd,.circle-even {
+        margin:0.5rem  1rem 0.5rem;
+}
 }
 
 

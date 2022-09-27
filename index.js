@@ -30,11 +30,6 @@ window.onload = pageLoaded;
 function pageLoaded() {
 
 }
-// var audio = document.createElement("AUDIO")
-// document.addEventListener("click", () => {document.body.appendChild(audio)         
-//   audio.play()
-// }  )
-// audio.src = "mp3/writer.wav"
 var text_first = "Hi, my name is"
 var text_second = "Gefen Bar."
 var text_third = "I'm a Software Developer."
@@ -96,5 +91,8 @@ function MobileNav() {
 }))
 
 
-// circles=document.querySelectorAll('.circle')
-// circles.forEach(el=>el.style.marginBottom="10vh")
+circlesOdd=document.querySelectorAll('.circle-odd')
+circlesEven=document.querySelectorAll('.circle-even')
+circlesEven.forEach(el=>{el.style.marginBottom="-5vh"; el.style.animation="bounceDown 3s infinite"})
+circlesOdd.forEach(el=>{el.style.animation="bounceUp 3s infinite"})
+
