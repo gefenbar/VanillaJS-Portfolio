@@ -85,14 +85,14 @@ function MobileNav() {
   }
 }
 
-  x=document.querySelectorAll('#myLinks a')
-  x.forEach(el=>el.addEventListener('click',()=>{
-  document.getElementById("myLinks").style.display="none"
+x = document.querySelectorAll('#myLinks a')
+x.forEach(el => el.addEventListener('click', () => {
+  document.getElementById("myLinks").style.display = "none"
 }))
 
 
-circlesOdd=document.querySelectorAll('.circle-odd')
-circlesEven=document.querySelectorAll('.circle-even')
-circlesEven.forEach(el=>{el.style.marginBottom="-5vh"; el.style.animation="bounceDown 3s infinite"})
-circlesOdd.forEach(el=>{el.style.animation="bounceUp 3s infinite"})
+circlesOdd = document.querySelectorAll('.circle-odd')
+circlesEven = document.querySelectorAll('.circle-even')
+circlesEven.forEach(el => { el.style.animation = "bounceDown 3s infinite" })
+circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
 
