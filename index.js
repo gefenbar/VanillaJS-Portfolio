@@ -28,8 +28,8 @@ details.forEach((targetDetail) => {
 
 window.onload = pageLoaded;
 function pageLoaded() {
-
 }
+
 var text_first = "Hi, my name is"
 var text_second = "Gefen Bar."
 var text_third = "I'm a Software Developer."
@@ -91,8 +91,8 @@ x.forEach(el => el.addEventListener('click', () => {
 }))
 
 
-circlesOdd = document.querySelectorAll('.circle-odd')
-circlesEven = document.querySelectorAll('.circle-even')
+circlesOdd = document.querySelectorAll('.container-circle-odd')
+circlesEven = document.querySelectorAll('.container-circle-even')
 circlesEven.forEach(el => { el.style.animation = "bounceDown 3s infinite" })
 circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
 
