@@ -1,4 +1,4 @@
-
+// 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -11,8 +11,9 @@ const observer = new IntersectionObserver((entries) => {
 })
 const hiddenElements = document.querySelectorAll('.hidden')
 hiddenElements.forEach((el) => observer.observe(el))
+// 
 
-
+// 
 const details = document.querySelectorAll("details");
 details.forEach((targetDetail) => {
   targetDetail.addEventListener("click", () => {
@@ -24,12 +25,13 @@ details.forEach((targetDetail) => {
     })
   })
 })
+// 
 
+// window.onload = pageLoaded;
+// function pageLoaded() {
+// }
 
-window.onload = pageLoaded;
-function pageLoaded() {
-}
-
+// 
 var text_first = "Hi, my name is"
 var text_second = "Gefen Bar."
 var text_third = "I'm a Software Developer."
@@ -47,67 +49,6 @@ setTimeout(function () { TypeWriter(type_fourth, text_fourth, 60) }, 5700)
 setTimeout(ShowButton, 12000)
 var writer_delay = 114
 
-function ShowButton() {
-  document.getElementById('button_on_hero').style.visibility = "visible"
-}
-
-
-var light_mod = false
-
-function ChangeLightDark() {
-  if (light_mod) {
-    ChangeToDark()
-    light_mod = false
-  }
-  else {
-    ChangeToLight()
-    light_mod = true;
-  }
-}
-function ChangeToDark() {
-  document.getElementsByTagName("body")[0].style.backgroundColor = "#0a192f"
-  document.getElementById("nav").style.backgroundColor = "#0a192f"
-  document.getElementById("button_on_hero").style.borderColor = "#64ffda"
-  document.getElementById("h2_on_hero").style.color = "#ccd6f6"
-  document.getElementById("copyright").style.color = "#ccd6f6"
-  document.getElementById("logo").style.filter = "brightness(1)"
-  document.getElementsByClassName("footer")[0].style.backgroundColor = "#0a192f"
-  textToWhite = document.querySelectorAll("#about_me_text p,  #experience div h2, #experience h3")
-  textToWhite.forEach(el => {
-    el.style.color = "white"
-  })
-  textToTorquise = document.querySelectorAll("#skills_section, #button_on_hero, #h1_on_hero, .projects button, .menu_item, h1, .footer ul li a, .footer ul li")
-  textToTorquise.forEach(el => {
-    el.style.color = "#64ffda"
-  })
-  socialToTorquise = document.querySelectorAll(".footer img")
-  socialToTorquise.forEach(el => {
-    el.style.filter="none"
-
-  })
-
-  document.getElementById('dark_light_button').innerHTML = "Light<br>mode"
-
-}
-
-
-function ChangeToLight() {
-  document.getElementsByTagName("body")[0].style.backgroundColor = "#64ffda"
-  document.getElementById("nav").style.backgroundColor = "#64ffda"
-  document.getElementsByClassName("footer")[0].style.backgroundColor = "#64ffda"
-  document.getElementById("button_on_hero").style.borderColor = "#0a192f"
-  document.getElementById("copyright").style.color = "#2b2f3e"
-  document.getElementById("logo").style.filter = "brightness(0.3)"
-  socialToDark = document.querySelectorAll(".footer img")
-  socialToDark.forEach(el => {
-    el.style.filter = "invert(100%) sepia(100%)  saturate(100%) hue-rotate(440deg) brightness(100%) contrast(100%)"
-  })
-  textToDark = document.querySelectorAll("#skills_section,#button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li ")
-  textToDark.forEach(el => {
-    el.style.color = "#0a192f"
-  })
-  document.getElementById('dark_light_button').innerHTML = "Dark<br>mode"
-}
 
 function TypeWriter(target, text, delay, clearText = false) {
   if (target.textContent === text) {
@@ -133,7 +74,74 @@ function TypeWriter(target, text, delay, clearText = false) {
     }, _delay);
   }
 }
+// 
 
+// 
+function ShowButton() {
+  document.getElementById('button_on_hero').style.visibility = "visible"
+}
+// 
+
+// 
+var light_mod = false
+
+function ChangeLightDark() {
+  if (light_mod) {
+    ChangeToDark()
+    light_mod = false
+  }
+  else {
+    ChangeToLight()
+    light_mod = true;
+  }
+}
+function ChangeToDark() {
+  document.getElementsByTagName("body")[0].style.backgroundColor = "#0a192f"
+  document.getElementById("nav").style.backgroundColor = "#0a192f"
+  document.getElementById("button_on_hero").style.borderColor = "#64ffda"
+  document.getElementById("h2_on_hero").style.color = "#ccd6f6"
+  document.getElementById("copyright").style.color = "#ccd6f6"
+  document.getElementById("logo").style.filter = "brightness(1)"
+  document.getElementsByClassName("footer")[0].style.backgroundColor = "#0a192f"
+  textToWhite = document.querySelectorAll("#about_me_text p,  #experience div h2, #experience h3")
+  textToWhite.forEach(el => {
+    el.style.color = "white"
+  })
+  textToTorquise = document.querySelectorAll("#skills_section, #button_on_hero, #h1_on_hero, .projects button, .menu_item, .hidden h1, .show h1, .footer ul li a, .footer ul li")
+  textToTorquise.forEach(el => {
+    el.style.color = "#64ffda"
+  })
+  socialToTorquise = document.querySelectorAll(".footer img")
+  socialToTorquise.forEach(el => {
+    el.style.filter="none"
+
+  })
+
+  document.getElementById('dark_light_button').innerHTML = "Light<br>mode"
+
+}
+
+
+function ChangeToLight() {
+  document.getElementsByTagName("body")[0].style.backgroundColor = "#64ffda"
+  document.getElementById("nav").style.backgroundColor = "#64ffda"
+  document.getElementsByClassName("footer")[0].style.backgroundColor = "#64ffda"
+  document.getElementById("button_on_hero").style.borderColor = "#0a192f"
+  document.getElementById("copyright").style.color = "#2b2f3e"
+  document.getElementById("logo").style.filter = "brightness(0.3)"
+  socialToDark = document.querySelectorAll(".footer img")
+  socialToDark.forEach(el => {
+    el.style.filter = "invert(100%) sepia(100%)  saturate(100%) hue-rotate(440deg) brightness(100%) contrast(100%)"
+  })
+  textToDark = document.querySelectorAll("#skills_section,#button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, .hidden h1, .show h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li ")
+  textToDark.forEach(el => {
+    el.style.color = "#0a192f"
+  })
+  document.getElementById('dark_light_button').innerHTML = "Dark<br>mode"
+}
+// 
+
+// 
 function MobileNav() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -147,9 +155,11 @@ x = document.querySelectorAll('#myLinks a')
 x.forEach(el => el.addEventListener('click', () => {
   document.getElementById("myLinks").style.display = "none"
 }))
+// 
 
-
+// 
 circlesOdd = document.querySelectorAll('.container-circle-odd')
 circlesEven = document.querySelectorAll('.container-circle-even')
 circlesEven.forEach(el => { el.style.animation = "bounceDown 3s infinite" })
 circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
+// 
