@@ -13,21 +13,21 @@
 
 </head>
 
-<body>
+<body id="body">
     <div id="nav">
         <img id="logo" src="images/logo.png" alt="logo">
         <ul>
-            <li> <a href="#hero_section">Home</a></li>
-            <li> <a href="#projects_section">Projects</a></li>
-            <li> <a href="#skills_section">Skills</a></li>
-            <li> <a href="#about_me_section">About me</a></li>
-            <li> <a href="#experience_section">Experience</a></li>
+            <li> <a class="menu_item" a href="#hero_section">Home</a></li>
+            <li> <a class="menu_item" href="#projects_section">Projects</a></li>
+            <li> <a class="menu_item" href="#skills_section">Skills</a></li>
+            <li> <a class="menu_item" href="#about_me_section">About me</a></li>
+            <li> <a class="menu_item" href="#experience_section">Experience</a></li>
         </ul>
     </div>
 
     <!-- Top Navigation Menu -->
     <div class="nav_mobile">
-        <a  href="#hero_section" class="active"><img id="logo_mobile" src="images/logo.png" alt="logo"></a>
+        <a href="#hero_section" class="active"><img id="logo_mobile" src="images/logo.png" alt="logo"></a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
             <a href="#hero_section">Home</a>
@@ -39,6 +39,7 @@
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="MobileNav()"> &zwnj; <i class="fa fa-bars"></i></a>
     </div>
+    <button type="button" id="dark_light_button" onclick="ChangeLightDark()">Light<br>mode</button>
     <span id="social_icons">
         <a href="https://www.linkedin.com/in/gefen-bar-software-developer/" target="_blank"><img
                 src="images/SVG/linkedin_logo.svg" alt="linkedin_logo" width="20" height="20"></a>
@@ -54,7 +55,8 @@
             <h3 id="h3_on_hero">&zwnj;</h3>
             <h4 id="h4_on_hero">&zwnj;</h4>
             <br>
-            <a href="files/Gefen_Bar_Resume.pdf" id="button_on_hero" target="_blank" download="Gefen_Bar_Resume">Download
+            <a href="files/Gefen_Bar_Resume.pdf" id="button_on_hero" target="_blank"
+                download="Gefen_Bar_Resume">Download
                 resume</a>
         </div>
     </section>

@@ -29,7 +29,12 @@ body {
     background-color: #0a192f;
     /* padding-bottom: -10vh; */
 }
-.nav_mobile{
+
+.menu_item {
+    color: #64ffda;
+}
+
+.nav_mobile {
     display: none;
 }
 
@@ -204,11 +209,12 @@ li {
     font-size: 50%;
 }
 
-.circle-odd, .circle-even {
+.circle-odd,
+.circle-even {
     position: relative;
     width: 150px;
     height: 150px;
-    margin: 0.5rem  2rem 0.5rem;
+    margin: 0.5rem 2rem 0.5rem;
     border-radius: 50%;
     background: #8892b0;
     overflow: hidden;
@@ -225,6 +231,7 @@ li {
         transform: translate(0px, 10px);
     }
 }
+
 @keyframes bounceDown {
 
     0%,
@@ -329,6 +336,21 @@ summary:nth-child(1) {
     cursor: pointer;
 }
 
+#dark_light_button {
+    color: black;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    top: 20%;
+    z-index: 10000000;
+    right: 1%;
+    background: #8892b0;
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+}
+
 #social_icons {
     position: fixed;
     display: flex;
@@ -340,7 +362,6 @@ summary:nth-child(1) {
     background: #8892b0;
     padding: 5px;
     border-radius: 15px;
-
 }
 
 #social_icons img {
@@ -384,8 +405,8 @@ summary:nth-child(1) {
         -webkit-transform: scale(0.8);
         transform: scale(0.8);
         background-color: #8892b0;
-        color:#0a192f;
-        transition: all 1s ;
+        color: #0a192f;
+        transition: all 1s;
     }
 
     a:hover {
@@ -433,56 +454,58 @@ summary:nth-child(1) {
 }
 
 @media only screen and (max-width: 755px) {
+
     /* mobile nav */
     /* Style the navigation menu */
-.nav_mobile {
-    overflow: hidden;
-    background-color: #001024;
-    position: relative;
-    display: block;
-  }
-  
-  /* Hide the links inside the navigation menu (except for logo/home) */
-  .nav_mobile #myLinks {
-    display: none;
-  }
-  /* .nav_mobile  img{display: none;} */
-  
-  /* Style navigation menu links */
-  .nav_mobile a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  /* Style the hamburger menu */
-  .nav_mobile a.icon {
-    padding-top: 20px;
-    background: #0a192f;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  #logo_mobile{
-    display: block;
-    width:50px;
-    height: 40px;
-    margin-top: -12px;
-    margin-left:-15px
-    
-  }
-  /* Style the active link (or home/logo) */
-  .active {
-    background-color: #0a192f;
-    color: white;
-  }
+    .nav_mobile {
+        overflow: hidden;
+        background-color: #001024;
+        position: relative;
+        display: block;
+    }
 
-  
-  /* footer 1 col */
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .nav_mobile #myLinks {
+        display: none;
+    }
+
+    /* .nav_mobile  img{display: none;} */
+
+    /* Style navigation menu links */
+    .nav_mobile a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    /* Style the hamburger menu */
+    .nav_mobile a.icon {
+        padding-top: 20px;
+        background: #0a192f;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #logo_mobile {
+        display: block;
+        width: 50px;
+        height: 40px;
+        margin-top: -12px;
+        margin-left: -15px
+    }
+
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: #0a192f;
+        color: white;
+    }
+
+
+    /* footer 1 col */
     .footer .col {
         width: 100% !important;
         float: none !important;
@@ -491,6 +514,7 @@ summary:nth-child(1) {
     #nav {
         display: none;
     }
+
     /* #nav_mobile{
         display: flex;
     } */
@@ -513,12 +537,14 @@ summary:nth-child(1) {
         height: 120vh;
     }
 
-    .circle-odd,.circle-even {
+    .circle-odd,
+    .circle-even {
         width: 110px;
         height: 110px;
     }
 
-    .circle-odd img,.circle-even img {
+    .circle-odd img,
+    .circle-even img {
         width: 62px;
         height: 110px;
     }
@@ -572,9 +598,11 @@ summary:nth-child(1) {
     .projects button {
         font-size: 60%;
     }
-    .circle-odd,.circle-even {
-        margin:0.5rem  1rem 0.5rem;
-}
+
+    .circle-odd,
+    .circle-even {
+        margin: 0.5rem 1rem 0.5rem;
+    }
 }
 
 
@@ -654,7 +682,7 @@ summary:nth-child(1) {
 }
 
 .footer a {
-    color: #64ffda !important;
+    color: #64ffda ;
     font-weight: 400;
 
 
