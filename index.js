@@ -82,7 +82,7 @@ function ChangeToDark() {
   })
   socialToTorquise = document.querySelectorAll(".footer img")
   socialToTorquise.forEach(el => {
-    el.style.filter="invert(86 %) sepia(102 %) saturate(2397 %) hue - rotate(440deg) brightness(100%) contrast(129 %)"
+    el.style.filter="none"
 
   })
 
@@ -100,7 +100,7 @@ function ChangeToLight() {
   document.getElementById("logo").style.filter = "brightness(0.3)"
   socialToDark = document.querySelectorAll(".footer img")
   socialToDark.forEach(el => {
-    el.style.filter = "invert(100%) sepia(100%) saturate(100%) brightness(100%) contrast(100%)"
+    el.style.filter = "invert(100%) sepia(100%)  saturate(100%) hue-rotate(440deg) brightness(100%) contrast(100%)"
   })
   textToDark = document.querySelectorAll("#skills_section,#button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li ")
   textToDark.forEach(el => {
