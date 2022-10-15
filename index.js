@@ -98,12 +98,15 @@ function ChangeLightDark() {
 function ChangeToDark() {
   document.getElementsByTagName("body")[0].style.backgroundColor = "#0a192f"
   document.getElementById("nav").style.backgroundColor = "#0a192f"
+  document.getElementById("myLinks").style.backgroundColor = "#001024"
+  document.querySelectorAll(".nav_mobile a")[0].style.backgroundColor = "#0a192f"
   document.getElementById("button_on_hero").style.borderColor = "#64ffda"
   document.getElementById("h2_on_hero").style.color = "#ccd6f6"
   document.getElementById("copyright").style.color = "#ccd6f6"
   document.getElementById("logo").style.filter = "brightness(1)"
+  document.getElementById("logo_mobile").style.filter = "brightness(1)"
   document.getElementsByClassName("footer")[0].style.backgroundColor = "#0a192f"
-  textToWhite = document.querySelectorAll("#about_me_text p,  #experience div h2, #experience h3")
+  textToWhite = document.querySelectorAll(".nav_mobile a, #about_me_text p,  #experience div h2, #experience h3")
   textToWhite.forEach(el => {
     el.style.color = "white"
   })
@@ -114,26 +117,27 @@ function ChangeToDark() {
   socialToTorquise = document.querySelectorAll(".footer img")
   socialToTorquise.forEach(el => {
     el.style.filter="none"
-
   })
-
   document.getElementById('dark_light_button').innerHTML = "Light<br>mode"
-
 }
 
 
 function ChangeToLight() {
   document.getElementsByTagName("body")[0].style.backgroundColor = "#64ffda"
   document.getElementById("nav").style.backgroundColor = "#64ffda"
+  document.getElementById("myLinks").style.backgroundColor = "#8892b0"
+  document.querySelectorAll(".nav_mobile a")[0].style.backgroundColor = "#64ffda"
   document.getElementsByClassName("footer")[0].style.backgroundColor = "#64ffda"
   document.getElementById("button_on_hero").style.borderColor = "#0a192f"
   document.getElementById("copyright").style.color = "#2b2f3e"
   document.getElementById("logo").style.filter = "brightness(0.3)"
+  document.getElementById("logo_mobile").style.filter = "brightness(0.3)"
+
   socialToDark = document.querySelectorAll(".footer img")
   socialToDark.forEach(el => {
     el.style.filter = "invert(100%) sepia(100%)  saturate(100%) hue-rotate(440deg) brightness(100%) contrast(100%)"
   })
-  textToDark = document.querySelectorAll("#skills_section,#button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, .hidden h1, .show h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li ")
+  textToDark = document.querySelectorAll(".nav_mobile a,  #skills_section,#button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, .hidden h1, .show h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li ")
   textToDark.forEach(el => {
     el.style.color = "#0a192f"
   })
