@@ -84,7 +84,6 @@ function ShowButton() {
 
 // 
 var light_mod = false
-
 function ChangeLightDark() {
   if (light_mod) {
     ChangeToDark()
@@ -135,9 +134,9 @@ function ChangeToDark() {
 
 
 function ChangeToLight() {
-  toTurquoise = document.querySelectorAll("#body, #nav, #myLinks, .nav_mobile a, .footer")
-  toTurquoise.forEach(el => {
-    el.style.backgroundColor = "#64ffda"
+  toWheat = document.querySelectorAll("#body, #nav, #myLinks, .nav_mobile a, .footer")
+  toWheat.forEach(el => {
+    el.style.backgroundColor = "wheat"
   })
   toDark = document.querySelectorAll(".nav_mobile a,  #skills_section, #button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, .hidden h1, .show h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li , .footer_social, #copyright, #logo, #logo_mobile")
   toDark.forEach(el => {
