@@ -338,13 +338,16 @@ summary:nth-child(1) {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    top: 20%;
+    /* top: 20%; */
+    bottom:1.5%;
     z-index: 10000000;
     right: 1%;
     background: #8892b0;
-    padding: 5px;
+    padding:15px;
     border-radius: 15px;
     text-align: center;
+    cursor:pointer;
+    font-weight: bold;
 }
 
 #social_icons {
