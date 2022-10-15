@@ -96,50 +96,69 @@ function ChangeLightDark() {
   }
 }
 function ChangeToDark() {
-  document.getElementsByTagName("body")[0].style.backgroundColor = "#0a192f"
-  document.getElementById("nav").style.backgroundColor = "#0a192f"
-  document.getElementById("myLinks").style.backgroundColor = "#001024"
-  document.querySelectorAll(".nav_mobile a")[0].style.backgroundColor = "#0a192f"
-  document.getElementById("button_on_hero").style.borderColor = "#64ffda"
-  document.getElementById("h2_on_hero").style.color = "#ccd6f6"
-  document.getElementById("copyright").style.color = "#ccd6f6"
-  document.getElementById("logo").style.filter = "brightness(1)"
-  document.getElementById("logo_mobile").style.filter = "brightness(1)"
-  document.getElementsByClassName("footer")[0].style.backgroundColor = "#0a192f"
-  textToWhite = document.querySelectorAll(".nav_mobile a, #about_me_text p,  #experience div h2, #experience h3")
-  textToWhite.forEach(el => {
+  toGrey = document.querySelectorAll("#h2_on_hero, copyright")
+  toGrey.forEach(el => {
+    el.style.color = "#ccd6f6"
+  })
+  toDark = document.querySelectorAll(".nav_mobile a, #body, #nav, #myLinks")
+  toDark.forEach(el => {
+    el.style.backgroundColor = "#0a192f"
+  })
+  toWhite = document.querySelectorAll(".nav_mobile a, #about_me_text p,  #experience div h2, #experience h3")
+  toWhite.forEach(el => {
     el.style.color = "white"
   })
-  textToTorquise = document.querySelectorAll("#skills_section, #button_on_hero, #h1_on_hero, .projects button, .menu_item, .hidden h1, .show h1, .footer ul li a, .footer ul li")
-  textToTorquise.forEach(el => {
-    el.style.color = "#64ffda"
+  toTurquoise = document.querySelectorAll("#skills_section, #button_on_hero, #h1_on_hero, .projects button, .menu_item, .hidden h1, .show h1, .footer ul li a, .footer ul li, .footer_social, .footer, #logo, #logo_mobile")
+  toTurquoise.forEach(el => {
+    if (el.className === "footer_social") {
+      el.style.filter = " invert(86%) sepia(102%) saturate(2397%) hue-rotate(440deg) brightness(100%) contrast(129%)"
+    }
+    if (el.className === "logo") {
+      el.style.filter = "brightness(1)"
+    }
+    if (el.className === "logo_mobile") {
+      el.style.filter = "brightness(1)"
+    }
+    if(el.className==="footer"){
+      el.style.backgroundColor = "#0a192f"
+    }
+    if (el.id === "button_on_hero") {
+      el.style.borderColor = "#64ffda"
+      el.style.color = "#64ffda"
+    }
+    else
+      el.style.color = "#64ffda"
   })
-  socialToTorquise = document.querySelectorAll(".footer img")
-  socialToTorquise.forEach(el => {
-    el.style.filter="none"
-  })
+
   document.getElementById('dark_light_button').innerHTML = "Light<br>mode"
 }
 
 
 function ChangeToLight() {
-  document.getElementsByTagName("body")[0].style.backgroundColor = "#64ffda"
-  document.getElementById("nav").style.backgroundColor = "#64ffda"
-  document.getElementById("myLinks").style.backgroundColor = "#8892b0"
-  document.querySelectorAll(".nav_mobile a")[0].style.backgroundColor = "#64ffda"
-  document.getElementsByClassName("footer")[0].style.backgroundColor = "#64ffda"
-  document.getElementById("button_on_hero").style.borderColor = "#0a192f"
-  document.getElementById("copyright").style.color = "#2b2f3e"
-  document.getElementById("logo").style.filter = "brightness(0.3)"
-  document.getElementById("logo_mobile").style.filter = "brightness(0.3)"
-
-  socialToDark = document.querySelectorAll(".footer img")
-  socialToDark.forEach(el => {
-    el.style.filter = "invert(100%) sepia(100%)  saturate(100%) hue-rotate(440deg) brightness(100%) contrast(100%)"
+  toTurquoise = document.querySelectorAll("#body, #nav, #myLinks, .nav_mobile a, .footer")
+  toTurquoise.forEach(el => {
+    el.style.backgroundColor = "#64ffda"
   })
-  textToDark = document.querySelectorAll(".nav_mobile a,  #skills_section,#button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, .hidden h1, .show h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li ")
-  textToDark.forEach(el => {
-    el.style.color = "#0a192f"
+  toDark = document.querySelectorAll(".nav_mobile a,  #skills_section, #button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, .hidden h1, .show h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li , .footer_social, #copyright, #logo, #logo_mobile")
+  toDark.forEach(el => {
+    if (el.id === "logo") {
+      el.style.filter = "brightness(0.3)"
+    }
+    if (el.id === "logo_mobile") {
+      el.style.filter = "brightness(0.3)"
+    }
+    if (el.className === "footer_social") {
+      el.style.filter = "none"
+    }
+    if (el.id === "button_on_hero") {
+      el.style.color = "blue"
+      el.style.borderColor = "#0a192f"
+    }
+    if (el.id === "copyright") {
+      el.style.color = "#2b2f3e"
+    }
+    else
+      el.style.color = "#0a192f"
   })
   document.getElementById('dark_light_button').innerHTML = "Dark<br>mode"
 }
