@@ -339,15 +339,16 @@ summary:nth-child(1) {
     flex-direction: column;
     flex-wrap: wrap;
     /* top: 20%; */
-    bottom:1.5%;
+    bottom: 1.5%;
     z-index: 10000000;
     right: 1%;
     background: #8892b0;
-    padding:15px;
+    padding: 5px;
     border-radius: 15px;
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
     font-weight: bold;
+    font-size: 17px;
 }
 
 #social_icons {
@@ -388,6 +389,10 @@ summary:nth-child(1) {
 
 @media(hover:hover) {
     #social_icons img:hover {
+        filter: blur(1px);
+    }
+
+    #dark_light_button:hover {
         filter: blur(1px);
     }
 
@@ -449,6 +454,9 @@ summary:nth-child(1) {
 @media only screen and (max-width:850px) {
     #nav {
         font-size: 18px;
+    }
+    #dark_light_button{
+    font-size: 10px;
     }
 }
 
