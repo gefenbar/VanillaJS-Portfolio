@@ -112,13 +112,13 @@ function ChangeToDark() {
     if (el.className === "footer_social") {
       el.style.filter = " invert(86%) sepia(102%) saturate(2397%) hue-rotate(440deg) brightness(100%) contrast(129%)"
     }
-    if (el.className === "logo") {
+    if (el.id === "logo") {
       el.style.filter = "brightness(1)"
     }
-    if (el.className === "logo_mobile") {
+    if (el.id === "logo_mobile") {
       el.style.filter = "brightness(1)"
     }
-    if(el.className==="footer"){
+    if (el.className === "footer") {
       el.style.backgroundColor = "#0a192f"
     }
     if (el.id === "button_on_hero") {
@@ -128,10 +128,10 @@ function ChangeToDark() {
     else
       el.style.color = "#64ffda"
   })
-  document.getElementById('sun_image').style.display="none"
-  document.getElementById('moon_image').style.display="flex"
-  document.getElementById('birds_image').style.display="none"
-  document.getElementById('stars_image').style.display="flex"
+  document.getElementById('sun_image').style.display = "none"
+  document.getElementById('moon_image').style.display = "flex"
+  document.getElementById('birds_image').style.display = "none"
+  document.getElementById('stars_image').style.display = "flex"
   document.getElementById('dark_light_button').innerHTML = "Light<br>mode"
 }
 
@@ -163,10 +163,10 @@ function ChangeToLight() {
       el.style.color = "#0a192f"
   })
   document.getElementById('dark_light_button').innerHTML = "Dark<br>mode"
-  document.getElementById('sun_image').style.display="flex"
-  document.getElementById('moon_image').style.display="none"
-  document.getElementById('birds_image').style.display="flex"
-  document.getElementById('stars_image').style.display="none"
+  document.getElementById('sun_image').style.display = "flex"
+  document.getElementById('moon_image').style.display = "none"
+  document.getElementById('birds_image').style.display = "flex"
+  document.getElementById('stars_image').style.display = "none"
 }
 // 
 
@@ -195,15 +195,15 @@ circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
 
 
 // 
-let moon=document.getElementById("moon_image")
-window.addEventListener('scroll',()=>{
-  let value= window.scrollY
-  moon.style.top= value*1.05+"px"
+let moon = document.getElementById("moon_image")
+window.addEventListener('scroll', () => {
+  let value = window.scrollY
+  moon.style.top = value * 1.05 + "px"
 
 
 })
-let sun=document.getElementById("sun_image")
-window.addEventListener('scroll',()=>{
-  let value= window.scrollY
-  sun.style.bottom= value*1.05+"px"
+let sun = document.getElementById("sun_image")
+window.addEventListener('scroll', () => {
+  let value = window.scrollY
+  sun.style.bottom = value * 1.05 + "px"
 })
