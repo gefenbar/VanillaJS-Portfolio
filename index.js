@@ -95,7 +95,7 @@ function ChangeLightDark() {
   }
 }
 function ChangeToDark() {
-  toGrey = document.querySelectorAll("#h2_on_hero, copyright")
+  toGrey = document.querySelectorAll("#h2_on_hero, #copyright")
   toGrey.forEach(el => {
     el.style.color = "#ccd6f6"
   })
