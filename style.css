@@ -19,14 +19,14 @@ body {
 
 /* main nav bar */
 #nav {
-    z-index: 1000;
+    z-index: 3;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     position: fixed;
     height: 7vh;
     font-size: 20px;
-    background-color: #0a192f;
+    background-color: transparent;
     /* padding-bottom: -10vh; */
 }
 
@@ -60,16 +60,18 @@ li {
 }
 
 #hero {
+    position: relative;
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
     height: 65vh;
     padding-top: 20%;
+    z-index: 3;
 }
 
 #h1_on_hero {
     color: #64ffda;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 16px;
 }
 
@@ -106,7 +108,7 @@ li {
     background-color: transparent;
     border: #64ffda solid 1px;
     padding: 1em;
-    visibility: hidden
+    /* visibility: hidden; */
 }
 
 /* 
@@ -328,7 +330,7 @@ li {
 
 summary:nth-child(1) {
     margin-left: 10px !important;
-    color: #ccd6f6;
+    color: #5d5f64;
     cursor: pointer;
 }
 
@@ -348,7 +350,7 @@ summary:nth-child(1) {
     text-align: center;
     cursor: pointer;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 18.5px;
 }
 
 #social_icons {
@@ -370,7 +372,58 @@ summary:nth-child(1) {
 }
 
 
+#moon_image {
+    mix-blend-mode: screen;
+    /* object-fit: cover; */
+    position: absolute;
+    display: flex;
+    right: 4%;
+    top: 0;
+    padding-top: 3vh;
+    width: 180px;
+    height: 180px;
+    z-index: 2;
+    filter: brightness(1.2) contrast(1.3);
+}
 
+#sun_image {
+    mix-blend-mode: screen;
+    object-fit: cover;
+    position: absolute;
+    display: none;
+    left: 4%;
+    bottom: 0;
+    padding-top: 3vh;
+    width: 180px;
+    height: 180px;
+    z-index: 2;
+    filter: brightness(1.2) contrast(1.3) saturate(5.5) hue-rotate(160deg);
+
+}
+
+#stars_image {
+    mix-blend-mode: screen;
+    object-fit: cover;
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: brightness(0.8)contrast(3.5) saturate(0.2);
+}
+
+#birds_image {
+    mix-blend-mode: screen;
+    object-fit: cover;
+    position: absolute;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: brightness(1)contrast(1);
+}
 
 .hidden {
     opacity: 0;
@@ -455,8 +508,9 @@ summary:nth-child(1) {
     #nav {
         font-size: 18px;
     }
-    #dark_light_button{
-    font-size: 10px;
+
+    #dark_light_button {
+        font-size: 10px;
     }
 }
 
@@ -466,9 +520,10 @@ summary:nth-child(1) {
     /* Style the navigation menu */
     .nav_mobile {
         overflow: hidden;
-        background-color: #001024;
+        background-color: transparent;
         position: relative;
         display: block;
+        z-index: 3;
     }
 
     /* Hide the links inside the navigation menu (except for logo/home) */
@@ -507,7 +562,7 @@ summary:nth-child(1) {
 
     /* Style the active link (or home/logo) */
     .active {
-        background-color: #0a192f;
+        /* background-color: #0a192f; */
         color: white;
     }
 
@@ -534,6 +589,7 @@ summary:nth-child(1) {
     #projects_section {
         margin-top: 5vh;
         margin-bottom: -20vh;
+        z-index:3;
     }
 
     .skills_section {

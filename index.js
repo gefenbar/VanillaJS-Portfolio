@@ -99,7 +99,7 @@ function ChangeToDark() {
   toGrey.forEach(el => {
     el.style.color = "#ccd6f6"
   })
-  toDark = document.querySelectorAll(".nav_mobile a, #body, #nav, #myLinks")
+  toDark = document.querySelectorAll("#body")
   toDark.forEach(el => {
     el.style.backgroundColor = "#0a192f"
   })
@@ -128,13 +128,16 @@ function ChangeToDark() {
     else
       el.style.color = "#64ffda"
   })
-
+  document.getElementById('sun_image').style.display="none"
+  document.getElementById('moon_image').style.display="flex"
+  document.getElementById('birds_image').style.display="none"
+  document.getElementById('stars_image').style.display="flex"
   document.getElementById('dark_light_button').innerHTML = "Light<br>mode"
 }
 
 
 function ChangeToLight() {
-  toWheat = document.querySelectorAll("#body, #nav, #myLinks, .nav_mobile a, .footer")
+  toWheat = document.querySelectorAll("#body, .footer")
   toWheat.forEach(el => {
     el.style.backgroundColor = "wheat"
   })
@@ -160,6 +163,10 @@ function ChangeToLight() {
       el.style.color = "#0a192f"
   })
   document.getElementById('dark_light_button').innerHTML = "Dark<br>mode"
+  document.getElementById('sun_image').style.display="flex"
+  document.getElementById('moon_image').style.display="none"
+  document.getElementById('birds_image').style.display="flex"
+  document.getElementById('stars_image').style.display="none"
 }
 // 
 
@@ -185,3 +192,18 @@ circlesEven = document.querySelectorAll('.container-circle-even')
 circlesEven.forEach(el => { el.style.animation = "bounceDown 3s infinite" })
 circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
 // 
+
+
+// 
+let moon=document.getElementById("moon_image")
+window.addEventListener('scroll',()=>{
+  let value= window.scrollY
+  moon.style.top= value*1.05+"px"
+
+
+})
+let sun=document.getElementById("sun_image")
+window.addEventListener('scroll',()=>{
+  let value= window.scrollY
+  sun.style.bottom= value*1.05+"px"
+})
