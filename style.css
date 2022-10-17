@@ -7,7 +7,7 @@ body {
     /* background: fixed url("images/bg_space.jpg"); */
     /* background-size: cover; */
 }
-h1{color:yellow;}
+h1{color:pink;}
 html {
     scroll-behavior: smooth;
 }
@@ -514,7 +514,7 @@ summary:nth-child(1) {
     }
 }
 
-@media only screen and (max-width: 755px) and (orientation:portrait) {
+@media only screen and (max-width: 755px) and (orientation:landscape) {
 body{
     height: 100vw;
     transform: rotate(90deg);
