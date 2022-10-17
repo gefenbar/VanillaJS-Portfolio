@@ -269,7 +269,7 @@ li {
 }
 
 #about_me_image {
-    background-image: url(images/cartoon.png);
+    background-image: url(images/cartoon.webp);
     background-position: 70% 20%;
     background-repeat: no-repeat;
     background-size: 17vw 30vh;
@@ -514,7 +514,7 @@ summary:nth-child(1) {
     }
 }
 
-@media only screen and (max-width: 755px) {
+@media only screen and (max-width: 755px) and (orientation:portrait) {
 
     /* mobile nav */
     /* Style the navigation menu */
