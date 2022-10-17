@@ -7,7 +7,7 @@ body {
     /* background: fixed url("images/bg_space.jpg"); */
     /* background-size: cover; */
 }
-h1{color:purple;}
+h1{color:red;}
 html {
     scroll-behavior: smooth;
 }
@@ -514,8 +514,12 @@ summary:nth-child(1) {
     }
 }
 
-@media only screen and (max-width: 755px) {
-
+@media only screen and (max-width: 755px) and (orientation:landscape) {
+body{
+    height: 100vw;
+    transform: rotate(90deg);
+}
+    
     /* mobile nav */
     /* Style the navigation menu */
     .nav_mobile {
