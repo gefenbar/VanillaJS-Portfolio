@@ -517,7 +517,7 @@ summary:nth-child(1) {
         font-size: 10px;
     }
 }
-@media only screen and  (max-width: 755px) and (orientation:landscape) {
+@media  (max-height: 455px) and (orientation:landscape) {
     body{
        display: none;
     }
