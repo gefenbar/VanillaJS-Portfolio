@@ -1,5 +1,5 @@
 //
-screen.orientation.lock('portrait'); 
+window.screen.orientation.lock('portrait'); 
 // 
 
 // 
