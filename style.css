@@ -7,7 +7,7 @@ body {
     /* background: fixed url("images/bg_space.jpg"); */
     /* background-size: cover; */
 }
-h1{color:purple;}
+h1{color:orange;}
 html {
     scroll-behavior: smooth;
 }
@@ -517,7 +517,7 @@ summary:nth-child(1) {
     body{
        display: none;
     }
-    #rotate_screen_message{
+    #rotate_device_message{
         display: block!important;
     }
 }
