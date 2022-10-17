@@ -523,14 +523,16 @@ summary:nth-child(1) {
 }
 
 @media (max-height: 740px) and (orientation:landscape) {
-    body {
-        display: none;
-    }
-
-    #rotate_device_message {
-        display: flex !important;
-    }
+    * {
+visibility: hidden;    }
+body{
+    height: 70vh;
 }
+    #rotate_device_message {
+visibility: visible;  
+display: block;  }
+}
+
 
 @media only screen and (max-width: 755px) {
 
