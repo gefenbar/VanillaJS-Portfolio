@@ -199,9 +199,8 @@ let moon = document.getElementById("moon_image")
 window.addEventListener('scroll', () => {
   let value = window.scrollY
   moon.style.top = value * 1.05 + "px"
-
-
 })
+
 let sun = document.getElementById("sun_image")
 window.addEventListener('scroll', () => {
   let value = window.scrollY
