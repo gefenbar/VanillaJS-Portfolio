@@ -1,3 +1,7 @@
+//
+screen.orientation.lock('portrait'); 
+// 
+
 // 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

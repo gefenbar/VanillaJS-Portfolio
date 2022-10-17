@@ -514,7 +514,7 @@ summary:nth-child(1) {
     }
 }
 
-@media only screen and (max-width: 755px) and (orientation:portrait) {
+@media only screen and (max-width: 755px) {
 
     /* mobile nav */
     /* Style the navigation menu */
@@ -589,7 +589,7 @@ summary:nth-child(1) {
     #projects_section {
         margin-top: 5vh;
         margin-bottom: -20vh;
-        z-index:3;
+        z-index: 3;
     }
 
     .skills_section {
