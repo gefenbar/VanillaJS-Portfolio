@@ -524,13 +524,24 @@ summary:nth-child(1) {
 
 @media (max-height: 740px) and (orientation:landscape) {
     * {
-visibility: hidden;    }
-body{
-    height: 70vh;
-}
+        visibility: hidden;
+    }
+
+    body {
+        height: 70vh;
+    }
+
     #rotate_device_message {
-visibility: visible;  
-display: block;  }
+        visibility: visible;
+        display: block;
+        flex-wrap: wrap;
+        visibility: visible;
+        display: flex;
+        padding-top: 40vh;
+        margin: 0;
+        justify-content: center;
+        color: whitesmoke;
+    }
 }
 
 
