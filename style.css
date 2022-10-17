@@ -517,7 +517,7 @@ summary:nth-child(1) {
 @media only screen and (max-width: 755px) and (orientation:landscape) {
 body{
     height: 100vw;
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
     
     /* mobile nav */
