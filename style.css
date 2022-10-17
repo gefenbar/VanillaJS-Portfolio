@@ -12,10 +12,6 @@ body {
     display: none;
 }
 
-h1 {
-    color: brown;
-}
-
 html {
     scroll-behavior: smooth;
 }
