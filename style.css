@@ -11,6 +11,10 @@ body {
 #rotate_device_message {
     display: none;
 }
+#res_not_supported {
+    display: none;
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -515,27 +519,29 @@ summary:nth-child(1) {
     }
 }
 
-/* @media (max-width: 320px) {
+@media (max-width: 320px) {
     * {
         visibility: hidden;
     }
 
-    body {
-        height: 70vh;
-    }
-
-    #rotate_device_message {
+    #res_not_supported {
         visibility: visible;
         display: block;
         flex-wrap: wrap;
         visibility: visible;
         display: flex;
-        padding-top: 40vh;
         margin: 0;
         justify-content: center;
         color: whitesmoke;
+        padding-top: 40vh;
+        text-align: center;
+
     }
-} */
+
+    body {
+        height: 70vh;
+    }
+}
 
 @media (max-height: 740px) and (orientation:landscape) {
     * {
@@ -556,6 +562,7 @@ summary:nth-child(1) {
         margin: 0;
         justify-content: center;
         color: whitesmoke;
+        text-align: center;
     }
 }
 
