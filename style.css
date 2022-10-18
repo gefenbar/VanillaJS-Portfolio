@@ -519,7 +519,7 @@ summary:nth-child(1) {
     }
 }
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
     * {
         visibility: hidden;
     }
@@ -541,7 +541,7 @@ summary:nth-child(1) {
     body {
         height: 70vh;
     }
-} */
+}
 
 @media (max-height: 740px) and (orientation:landscape) {
     * {
