@@ -519,7 +519,7 @@ summary:nth-child(1) {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     * {
         visibility: hidden;
     }
@@ -543,7 +543,7 @@ summary:nth-child(1) {
     }
 }
 
-@media only screen and (max-height: 740px) and (orientation:landscape) {
+@media (max-height: 740px) and (orientation:landscape) {
     * {
         visibility: hidden;
     }
