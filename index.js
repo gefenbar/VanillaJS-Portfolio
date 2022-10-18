@@ -138,7 +138,7 @@ function ChangeToDark() {
 
 function ChangeToLight() {
   sun_moon = document.getElementById('sun_moon_image')
-  sun_moon.style.filter = "brightness(0.7) contrast(3.3)"
+  sun_moon.style.filter = "brightness(0.7) contrast(0.7)"
 
   toWheat = document.querySelectorAll("#body, .footer")
   toWheat.forEach(el => {
