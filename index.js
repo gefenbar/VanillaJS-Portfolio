@@ -95,6 +95,8 @@ function ChangeLightDark() {
   }
 }
 function ChangeToDark() {
+  sun_moon = document.getElementById('sun_moon_image')
+  sun_moon.style.filter = "brightness(2.7) contrast(3.3)invert(1) drop-shadow(4px 1px 0px white)"
   toGrey = document.querySelectorAll("#h2_on_hero, #copyright")
   toGrey.forEach(el => {
     el.style.color = "#ccd6f6"
@@ -128,8 +130,6 @@ function ChangeToDark() {
     else
       el.style.color = "#64ffda"
   })
-  document.getElementById('sun_image').style.display = "none"
-  document.getElementById('moon_image').style.display = "flex"
   document.getElementById('birds_image').style.display = "none"
   document.getElementById('stars_image').style.display = "flex"
   document.getElementById('dark_light_button').innerHTML = "Light<br>mode"
@@ -137,6 +137,9 @@ function ChangeToDark() {
 
 
 function ChangeToLight() {
+  sun_moon = document.getElementById('sun_moon_image')
+  sun_moon.style.filter = "brightness(0.7) contrast(3.3)"
+
   toWheat = document.querySelectorAll("#body, .footer")
   toWheat.forEach(el => {
     el.style.backgroundColor = "wheat"
@@ -163,8 +166,6 @@ function ChangeToLight() {
       el.style.color = "#0a192f"
   })
   document.getElementById('dark_light_button').innerHTML = "Dark<br>mode"
-  document.getElementById('sun_image').style.display = "flex"
-  document.getElementById('moon_image').style.display = "none"
   document.getElementById('birds_image').style.display = "flex"
   document.getElementById('stars_image').style.display = "none"
 }
@@ -195,25 +196,12 @@ circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
 
 
 // 
-moon = document.getElementById("moon_image")
-sun = document.getElementById("sun_image")
-// if (!light_mod) {
-//   sun.style.bottom = 3 + "%"
-// }
-// else {
-//   moon.style.bottom = 3 + "%"
-// }
+sun_moon = document.getElementById("sun_moon_image")
 window.addEventListener('scroll', () => {
   let value = window.scrollY
 
-  if (!light_mod) {
-    moon.style.bottom = value * 1.05 + "px"
-  }
-
-  else {
-    let value = window.scrollY
-    sun.style.bottom = value * 1.05 + "px"
-  }
+  sun_moon.style.bottom = value * 1.05 + "px"
 }
 )
+
 // 
