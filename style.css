@@ -536,9 +536,13 @@ summary:nth-child(1) {
         display: flex;
         margin: 0;
         justify-content: center;
-        color: orange;
-        padding-top: 40vh;
+        color: whitesmoke;
+        padding-top: 30vh;
         text-align: center;
+        font-size: 20px;
+        padding-left: 3%;
+        padding-right: 3%;
+        
 
     }
 
