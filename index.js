@@ -195,24 +195,25 @@ circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
 
 
 // 
-let moon = document.getElementById("moon_image")
-let sun = document.getElementById("sun_image")
-
+moon = document.getElementById("moon_image")
+sun = document.getElementById("sun_image")
+// if (!light_mod) {
+//   sun.style.bottom = 3 + "%"
+// }
+// else {
+//   moon.style.bottom = 3 + "%"
+// }
 window.addEventListener('scroll', () => {
-  if (!light_mod) {
-    let value = window.scrollY
-    moon.style.bottom = value * 1.05 + "px"
-    // sun.style.bottom=2+"%"
+  let value = window.scrollY
 
+  if (!light_mod) {
+    moon.style.bottom = value * 1.05 + "px"
+  }
+
+  else {
+    let value = window.scrollY
+    sun.style.bottom = value * 1.05 + "px"
   }
 }
 )
-
-window.addEventListener('scroll', () => {
-  if (light_mod) {
-    let value = window.scrollY
-    sun.style.bottom = value * 1.05 + "px"
-    // moon.style.bottom=2+"%"
-  }
-})
 // 
