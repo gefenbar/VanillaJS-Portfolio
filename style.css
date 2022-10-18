@@ -387,12 +387,12 @@ summary:nth-child(1) {
 
 #moon_image {
     mix-blend-mode: screen;
-    object-fit: contain;
+    object-fit: cover;
     position: absolute;
     display: flex;
     right: 4%;
     top: 0;
-    padding-top: 3vh;
+    margin-top: 3vh;
     width: 180px;
     height: 180px;
     z-index: 2;
