@@ -13,7 +13,7 @@ body {
 }
 
 #res_not_supported {
-    display: none;
+    visibility: hidden;
 }
 
 
@@ -527,9 +527,7 @@ summary:nth-child(1) {
 
     #res_not_supported {
         visibility: visible;
-        display: block;
         flex-wrap: wrap;
-        visibility: visible;
         display: flex;
         margin: 0;
         justify-content: center;
