@@ -197,12 +197,18 @@ circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
 // 
 let moon = document.getElementById("moon_image")
 window.addEventListener('scroll', () => {
-  let value = window.scrollY
-  moon.style.top = value * 1.05 + "px"
-})
+  if (!light_mod) {
+    let value = window.scrollY
+    moon.style.top = value * 1.05 + "px"
+  }
+}
+)
 
 let sun = document.getElementById("sun_image")
 window.addEventListener('scroll', () => {
-  let value = window.scrollY
-  sun.style.bottom = value * 1.05 + "px"
+  if (light_mod) {
+    let value = window.scrollY
+    sun.style.bottom = value * 1.05 + "px"
+  }
 })
+// 
