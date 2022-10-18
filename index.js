@@ -199,7 +199,7 @@ let moon = document.getElementById("moon_image")
 window.addEventListener('scroll', () => {
   if (!light_mod) {
     let value = window.scrollY
-    moon.style.top = value * 1.05 + "px"
+    moon.style.top = value * 1.15 + "px"
   }
 }
 )
