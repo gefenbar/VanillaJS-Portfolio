@@ -16,7 +16,7 @@ body {
     visibility: hidden;
     position:absolute;
     z-index: -10;
-    color:black;
+    color: black !important;;
 }
 
 
