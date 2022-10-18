@@ -522,7 +522,7 @@ summary:nth-child(1) {
     }
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 200px) {
     * {
         visibility: hidden;
     }
@@ -533,7 +533,7 @@ summary:nth-child(1) {
         display: flex;
         margin: 0;
         justify-content: center;
-        color: pink;
+        color: yellow;
         padding-top: 40vh;
         text-align: center;
 
