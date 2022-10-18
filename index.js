@@ -195,7 +195,7 @@ circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
 
 
 // 
-var moon = document.getElementById("moon_image")
+let moon = document.getElementById("moon_image")
 window.addEventListener('scroll', () => {
   let value = window.scrollY
   moon.style.top = value * 1.05 + "px"
