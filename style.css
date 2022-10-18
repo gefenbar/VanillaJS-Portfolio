@@ -525,7 +525,7 @@ summary:nth-child(1) {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 380px) {
     * {
         visibility: hidden;
     }
@@ -536,7 +536,7 @@ summary:nth-child(1) {
         display: flex;
         margin: 0;
         justify-content: center;
-        color: green;
+        color: orange;
         padding-top: 40vh;
         text-align: center;
 
