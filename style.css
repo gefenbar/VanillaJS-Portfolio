@@ -167,7 +167,9 @@ li {
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
-
+#more_github_text{
+color:white;
+}
 #skills_section {
     color: #64ffda;
     height: 100vh;
@@ -527,7 +529,9 @@ summary:nth-child(1) {
 
 
 @media only screen and (max-width: 755px) {
-
+    #more_github_text{
+        font-size: 70%;
+    }
     /* mobile nav */
     /* Style the navigation menu */
     .nav_mobile {

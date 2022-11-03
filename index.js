@@ -105,7 +105,7 @@ function ChangeToDark() {
   toDark.forEach(el => {
     el.style.backgroundColor = "#0a192f"
   })
-  toWhite = document.querySelectorAll(".nav_mobile a, #about_me_text p,  #experience div h2, #experience h3")
+  toWhite = document.querySelectorAll("#more_github_text,.nav_mobile a, #about_me_text p,  #experience div h2, #experience h3")
   toWhite.forEach(el => {
     el.style.color = "white"
   })
@@ -144,7 +144,7 @@ function ChangeToLight() {
   toWheat.forEach(el => {
     el.style.backgroundColor = "wheat"
   })
-  toDark = document.querySelectorAll(".nav_mobile a,  #skills_section, #button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, .hidden h1, .show h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li , .footer_social, #copyright, #logo, #logo_mobile")
+  toDark = document.querySelectorAll("#more_github_text,.nav_mobile a,  #skills_section, #button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, .hidden h1, .show h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li , .footer_social, #copyright, #logo, #logo_mobile")
   toDark.forEach(el => {
     if (el.id === "logo") {
       el.style.filter = "brightness(0.3)"
