@@ -1,37 +1,3 @@
-// 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show')
-    }
-    else {
-      entry.target.classList.remove('show')
-    }
-  })
-})
-const hiddenElements = document.querySelectorAll('.hidden')
-hiddenElements.forEach((el) => observer.observe(el))
-// 
-
-// 
-const details = document.querySelectorAll("details");
-details.forEach((targetDetail) => {
-  targetDetail.addEventListener("click", () => {
-    // Close all the details that are not targetDetail.
-    details.forEach((detail) => {
-      if (detail !== targetDetail) {
-        detail.removeAttribute("open")
-      }
-    })
-  })
-})
-// 
-
-// window.onload = pageLoaded;
-// function pageLoaded() {
-// }
-
-// 
 var text_first = "Hi, my name is"
 var text_second = "Gefen Bar."
 var text_third = "I'm a Software Developer."
@@ -74,6 +40,44 @@ function TypeWriter(target, text, delay, clearText = false) {
     }, _delay);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+    }
+    else {
+      entry.target.classList.remove('show')
+    }
+  })
+})
+const hiddenElements = document.querySelectorAll('.hidden')
+hiddenElements.forEach((el) => observer.observe(el))
+// 
+
+// 
+const details = document.querySelectorAll("details");
+details.forEach((targetDetail) => {
+  targetDetail.addEventListener("click", () => {
+    // Close all the details that are not targetDetail.
+    details.forEach((detail) => {
+      if (detail !== targetDetail) {
+        detail.removeAttribute("open")
+      }
+    })
+  })
+})
+
 // 
 
 // 
@@ -81,96 +85,6 @@ function ShowButton() {
   document.getElementById('button_on_hero').style.visibility = "visible"
 }
 // 
-
-// 
-var light_mod = false
-function ChangeLightDark() {
-  if (light_mod) {
-    ChangeToDark()
-    light_mod = false
-  }
-  else {
-    ChangeToLight()
-    light_mod = true;
-  }
-}
-function ChangeToDark() {
-  sun_moon = document.getElementById('sun_moon_image')
-  sun_moon.style.filter = "brightness(2.7) contrast(3.3)invert(1) drop-shadow(4px 1px 0px white)"
-  toGrey = document.querySelectorAll("#h2_on_hero, #copyright")
-  toGrey.forEach(el => {
-    el.style.color = "#ccd6f6"
-  })
-  toDark = document.querySelectorAll("#body")
-  toDark.forEach(el => {
-    el.style.backgroundColor = "#0a192f"
-  })
-  toWhite = document.querySelectorAll("#more_github_text,.nav_mobile a, #about_me_text p,  #experience div h2, #experience h3")
-  toWhite.forEach(el => {
-    el.style.color = "white"
-  })
-  toTurquoise = document.querySelectorAll("#skills_section, #button_on_hero, #h1_on_hero, .projects button, .menu_item, .hidden h1, .show h1, .footer ul li a, .footer ul li, .footer_social, .footer, #logo, #logo_mobile")
-  toTurquoise.forEach(el => {
-    if (el.className === "footer_social") {
-      el.style.filter = " invert(86%) sepia(102%) saturate(2397%) hue-rotate(440deg) brightness(100%) contrast(129%)"
-    }
-    if (el.id === "logo") {
-      el.style.filter = "brightness(1)"
-    }
-    if (el.id === "logo_mobile") {
-      el.style.filter = "brightness(1)"
-    }
-    if (el.className === "footer") {
-      el.style.backgroundColor = "#0a192f"
-    }
-    if (el.id === "button_on_hero") {
-      el.style.borderColor = "#64ffda"
-      el.style.color = "#64ffda"
-    }
-    else
-      el.style.color = "#64ffda"
-  })
-  document.getElementById('birds_image').style.display = "none"
-  document.getElementById('stars_image').style.display = "flex"
-  document.getElementById('dark_light_button').innerHTML = "Light<br>mode"
-}
-
-
-function ChangeToLight() {
-  sun_moon = document.getElementById('sun_moon_image')
-  sun_moon.style.filter = "brightness(0.7) contrast(0.7)"
-
-  toWheat = document.querySelectorAll("#body, .footer")
-  toWheat.forEach(el => {
-    el.style.backgroundColor = "wheat"
-  })
-  toDark = document.querySelectorAll("#more_github_text,.nav_mobile a,  #skills_section, #button_on_hero, #h1_on_hero , #h2_on_hero, .projects button, .menu_item, .hidden h1, .show h1, #about_me_text p, #experience div h2, #experience h3, .footer ul li a, .footer ul li , .footer_social, #copyright, #logo, #logo_mobile")
-  toDark.forEach(el => {
-    if (el.id === "logo") {
-      el.style.filter = "brightness(0.3)"
-    }
-    if (el.id === "logo_mobile") {
-      el.style.filter = "brightness(0.3)"
-    }
-    if (el.className === "footer_social") {
-      el.style.filter = "none"
-    }
-    if (el.id === "button_on_hero") {
-      el.style.color = "blue"
-      el.style.borderColor = "#0a192f"
-    }
-    if (el.id === "copyright") {
-      el.style.color = "#2b2f3e"
-    }
-    else
-      el.style.color = "#0a192f"
-  })
-  document.getElementById('dark_light_button').innerHTML = "Dark<br>mode"
-  document.getElementById('birds_image').style.display = "flex"
-  document.getElementById('stars_image').style.display = "none"
-}
-// 
-
 // 
 function MobileNav() {
   var x = document.getElementById("myLinks");
@@ -188,20 +102,12 @@ x.forEach(el => el.addEventListener('click', () => {
 // 
 
 // 
-circlesOdd = document.querySelectorAll('.container-circle-odd')
-circlesEven = document.querySelectorAll('.container-circle-even')
-circlesEven.forEach(el => { el.style.animation = "bounceDown 3s infinite" })
-circlesOdd.forEach(el => { el.style.animation = "bounceUp 3s infinite" })
+
+circles = document.querySelectorAll('.container-circle')
+circles.forEach(el => { el.style.animation = "bounceDown 3s infinite" })
 // 
 
 
-// 
-sun_moon = document.getElementById("sun_moon_image")
-window.addEventListener('scroll', () => {
-  let value = window.scrollY
 
-  sun_moon.style.bottom = value * 1.05 + "px"
-}
-)
 
-// 
+//new

@@ -292,23 +292,31 @@ body {
 }
 
 
-
 #about_me_section {
     padding: 35vh 0;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #about_me_container {
+    width: 80%;
+    max-width: 1200px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center !important;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 #about_me_text {
     max-width: 1200px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     text-align: center;
 }
@@ -335,7 +343,8 @@ body {
 
 
 #experience {
-    background-color: #aaaa;
+    background-color: #f2f2f2;
+    text-align: center;
 }
 
 #experience div {
