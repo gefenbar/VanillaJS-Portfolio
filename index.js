@@ -103,11 +103,11 @@ function ChangeLightDark() {
 
   if (body.classList.contains('dark-mode')) {
     // Switch to light mode
-    body.classList.remove('dark-mode');
+    // body.classList.remove('dark-mode');
     button.innerHTML = 'Light<br>mode';
   } else {
     // Switch to dark mode
-    body.classList.add('dark-mode');
+    // body.classList.add('dark-mode');
     button.innerHTML = 'Dark<br>mode';
   }
 }
@@ -174,5 +174,5 @@ function toggleTheme() {
 
 // Add event listener to toggle button
 const toggleBtn = document.querySelector("#dark_light_button");
-toggleBtn.addEventListener("click", toggleTheme);
+// toggleBtn.addEventListener("click", toggleTheme);
 toggleBtn.addEventListener("click", ChangeLightDark)
