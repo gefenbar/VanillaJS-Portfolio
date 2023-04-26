@@ -14,8 +14,6 @@
 </head>
 
 <body id="body">
-    <h1 id="rotate_device_message">Please rotate your device!</h1>
-    <h1 id="res_not_supported">Screen resolution not supported!<br><br>use browser's "Desktop mode"</h1>
     <div id="nav">
         <img id="logo" src="images/logo.webp" alt="logo">
         <ul>
@@ -26,34 +24,9 @@
             <li> <a class="menu_item" href="#experience_section">Experience</a></li>
         </ul>
     </div>
-
-    <!-- Top Navigation Menu -->
-    <div class="nav_mobile">
-        <a href="#hero_section" class="active"><img id="logo_mobile" src="images/logo.webp" alt="logo"></a>
-        <!-- Navigation links (hidden by default) -->
-        <div id="myLinks">
-            <a href="#hero_section">Home</a>
-            <a href="#projects_section">Projects</a>
-            <a href="#skills_section">Skills</a>
-            <a href="#about_me_section">About me</a>
-            <a href="#experience_section">Experience</a>
-        </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="MobileNav()"> &zwnj; <i class="fa fa-bars"></i></a>
-    </div>
     <button type="button" id="dark_light_button" onclick="ChangeLightDark()">Light<br>mode</button>
-    <span id="social_icons">
-        <a href="https://www.linkedin.com/in/gefen-bar-software-developer/" target="_blank"><img
-                src="images/SVG/linkedin_logo.svg" alt="linkedin_logo" width="20" height="20"></a>
-        <a href="https://wa.me/972502001376" target="_blank"> <img src="images/SVG//whatsapp_logo.svg"
-                alt="whatsapp_logo" width="20" height="20"></a>
-        <a href="mailto:gefenbar003@gmail.com" target="_blank"><img src="images/SVG/email_logo.svg" alt="email_logo"
-                width="20" height="20"></a>
-    </span>
+
     <section id="hero_section" class="hidden">
-        <img id="sun_moon_image" src="images/sun_moon.webp" alt="sun_moon">
-        <img id="stars_image" src="images/stars.webp" alt="stars">
-        <img id="birds_image" src="images/birds.webp" alt="birds">
         <div id="hero">
             <h1 id="h1_on_hero">&zwnj; </h1>
             <h2 id="h2_on_hero">&zwnj;</h2>
@@ -68,7 +41,8 @@
     <section id="projects_section" class="hidden">
         <h1>Projects</h1>
         <div class="projects">
-            <button type="button" onclick="window.location.href='https://github.com/gefenbar/portfolio-website'">This<br>Website</button>
+            <button type="button"
+                onclick="window.location.href='https://github.com/gefenbar/portfolio-website'">This<br>Website</button>
             <button type="button" onclick="window.location.href='https://github.com/gefenbar/custom-website'">
                 Custom<br>Website </button>
         </div>
@@ -77,53 +51,53 @@
                 onclick="window.location.href='https://airlight.co.il'">Wordpress<br>Website</button>
             <button type="button"
                 onclick="window.location.href='https://github.com/gefenbar/Prototype5'">Unity<br>Game</button>
-                <br>
-                <br>
-                <a id="more_github_text" href="https://github.com/gefenbar/">And more on my github account..</a>
+            <br>
+            <br>
+            <a id="more_github_text" href="https://github.com/gefenbar/">And more on my github account..</a>
         </div>
     </section>
     <section id="skills_section" class="hidden">
         <h1>Skills</h1>
         <div class="wrap-circles">
-            <div class="container-circle-odd">HTML
-                <div class="circle-odd">
+            <div class="container-circle">HTML
+                <div class="circle">
                     <img src="images/SVG/html.svg" alt="" width="100" height="150">
                 </div>
             </div>
-            <div class="container-circle-even">CSS
-                <div class="circle-even">
+            <div class="container-circle">CSS
+                <div class="circle">
                     <img src="images/SVG/css.svg" alt="" width="100" height="150">
                 </div>
             </div>
-            <div class="container-circle-odd">JavaScript
-                <div class="circle-odd">
+            <div class="container-circle">JavaScript
+                <div class="circle">
                     <img src="images/SVG/js.svg" alt="" width="100" height="150">
                 </div>
             </div>
-            <div class="container-circle-even">Wordpress
-                <div class="circle-even">
+            <div class="container-circle">Wordpress
+                <div class="circle">
                     <img src="images/SVG/wordpress.svg" alt="" width="100" height="150">
                 </div>
             </div>
         </div>
         <div class="wrap-circles">
-            <div class="container-circle-odd">Java
-                <div class="circle-odd">
+            <div class="container-circle">Java
+                <div class="circle">
                     <img src="images/SVG/java.svg" alt="" width="100" height="150">
                 </div>
             </div>
-            <div class="container-circle-even">Python
-                <div class="circle-even">
+            <div class="container-circle">Python
+                <div class="circle">
                     <img src="images/SVG/python.svg" alt="" width="100" height="150">
                 </div>
             </div>
-            <div class="container-circle-odd">github
-                <div class="circle-odd">
+            <div class="container-circle">github
+                <div class="circle">
                     <img src="images/SVG/github.svg" alt="" width="100" height="150">
                 </div>
             </div>
-            <div class="container-circle-even">c#
-                <div class="circle-even">
+            <div class="container-circle">c#
+                <div class="circle">
                     <img src="images/SVG/csharp.svg" alt="" width="100" height="150">
                 </div>
             </div>
@@ -141,9 +115,7 @@
                     independent learner who is always excited about learning new technologies
                     and getting better as a programmer.</p>
             </div>
-            <div id="about_me_image">
-                <!-- <img src="images/face_painted.png" alt="face" width="220" height="300"> -->
-            </div>
+
         </div>
     </section>
 
@@ -208,7 +180,9 @@
     <footer>
         <div class="footer">
             <div class="contain">
-                <div class="col social">
+
+
+                <div class="col">
                     <h1>contact</h1>
                     <ul class="footer_social">
                         <li><a href="https://www.linkedin.com/in/gefen-bar-software-developer/" target="_blank"><img
@@ -226,16 +200,6 @@
                         <li>gefenbar003@gmail.com</li>
                         <li>050-200-1376</li>
                         <li>Erez, Israel</li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h1>navigate</h1>
-                    <ul>
-                        <li><a href="#hero_section">Home</a></li>
-                        <li><a href="#projects_section">Projects</a></li>
-                        <li><a href="#skills_section">Skills</a></li>
-                        <li><a href="#about_me_section">About Me</a></li>
-                        <li><a href="#experience_section">Experience</a></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
