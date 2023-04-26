@@ -180,8 +180,11 @@ body {
 /* Projects section styles */
 #projects_section {
     height: 100vh;
-    padding: 30vh;
+    padding-top: 30vh;
     background-color: #f8f8f8;
+    padding-right: 5vh;
+    padding-left: 5vh;
+
 }
 
 #projects_section h1 {
@@ -298,8 +301,65 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
+    overflow: hidden;
 
 }
+
+#about_me_container {
+    position: relative;
+    height: 450px;
+    background-color: #f8f8f8;
+}
+
+#about_me_container:before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #ff4a57, #ff0f0f);
+    animation: gradient 30s ease-in-out infinite alternate;
+}
+
+#about_me_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    font-size: 24px;
+}
+
+@keyframes gradient {
+    0% {
+        top: -100%;
+        left: -100%;
+    }
+
+    25% {
+        top: 0%;
+        left: -100%;
+    }
+
+    50% {
+        top: 0%;
+        left: 0%;
+    }
+
+    75% {
+        top: -100%;
+        left: 0%;
+    }
+
+    100% {
+        top: -100%;
+        left: -100%;
+    }
+}
+
 
 #about_me_container {
     width: 80%;
@@ -308,7 +368,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-    background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
@@ -510,6 +569,7 @@ footer {
     .projects button {
         margin-right: 0;
         margin-bottom: 20px;
+        /* height: 120px; */
     }
 
     #hero h4 {
@@ -518,7 +578,7 @@ footer {
 
     #projects_section {
         padding: 0;
-        padding-top: 8vh;
+        padding-top: 4vh;
     }
 
     .col {
