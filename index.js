@@ -63,9 +63,9 @@ const observer = new IntersectionObserver((entries) => {
 })
 const hiddenElements = document.querySelectorAll('.hidden')
 hiddenElements.forEach((el) => observer.observe(el))
-// 
 
-// 
+
+
 const details = document.querySelectorAll("details");
 details.forEach((targetDetail) => {
   targetDetail.addEventListener("click", () => {
@@ -78,14 +78,11 @@ details.forEach((targetDetail) => {
   })
 })
 
-// 
 
-// 
 function ShowButton() {
   document.getElementById('button_on_hero').style.visibility = "visible"
 }
-// 
-// 
+
 function MobileNav() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -99,15 +96,83 @@ x = document.querySelectorAll('#myLinks a')
 x.forEach(el => el.addEventListener('click', () => {
   document.getElementById("myLinks").style.display = "none"
 }))
-// 
 
-// 
+function ChangeLightDark() {
+  const body = document.body;
+  const button = document.getElementById('dark_light_button');
 
-circles = document.querySelectorAll('.container-circle')
-circles.forEach(el => { el.style.animation = "bounceDown 3s infinite" })
-// 
+  if (body.classList.contains('dark-mode')) {
+    // Switch to light mode
+    body.classList.remove('dark-mode');
+    button.innerHTML = 'Light<br>mode';
+  } else {
+    // Switch to dark mode
+    body.classList.add('dark-mode');
+    button.innerHTML = 'Dark<br>mode';
+  }
+}
 
+// Get the body element
+const body = document.body;
 
+// Get all elements that need to be changed to dark theme
+const navBar = document.querySelector("#nav");
+const mainContent = document.querySelector("body");
+const exp_section = document.querySelector("details" );
 
+console.log(navBar);
+console.log(mainContent);
+console.log(exp_section);
 
-//new
+// Define styles for dark theme
+const darkTheme = {
+  "--primary-color": "black",
+  "--secondary-color": "gray",
+  "--tertiary-color": "blue",
+  "--text-color": "white"
+}
+// Function to apply dark theme to all elements
+function applyDarkTheme() {
+  // Apply dark theme to body element
+  Object.keys(darkTheme).forEach((key) => {
+    body.style.setProperty(key, darkTheme[key]);
+  });
+
+  // Apply dark theme to other elements
+  console.log(navBar);
+  console.log(mainContent);
+  console.log(exp_section);
+
+  navBar.classList.add("navbar-dark");
+  mainContent.classList.add("bg-dark", "text-white");
+  exp_section.classList.add("bg-dark", "text-white");
+}
+
+// Function to remove dark theme from all elements
+function removeDarkTheme() {
+  // Remove dark theme from body element
+  Object.keys(darkTheme).forEach((key) => {
+    body.style.removeProperty(key);
+  });
+
+  // Remove dark theme from other elements
+  navBar.classList.remove("navbar-dark");
+  mainContent.classList.remove("bg-dark", "text-white");
+  exp_section.classList.remove("bg-dark", "text-white");
+}
+
+// Function to toggle between light and dark theme
+function toggleTheme() {
+  if (body.classList.contains("dark-theme")) {
+    body.classList.remove("dark-theme");
+    removeDarkTheme();
+  } else {
+    body.classList.add("dark-theme");
+    applyDarkTheme();
+  }
+}
+
+// Add event listener to toggle button
+const toggleBtn = document.querySelector("#dark_light_button");
+toggleBtn.addEventListener("click", toggleTheme);
+toggleBtn.addEventListener("click", ChangeLightDark)
