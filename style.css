@@ -211,7 +211,7 @@ body {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 
@@ -642,7 +642,8 @@ footer {
     #hero {
         height: 135vh;
     }
-    #button_on_hero{
-        margin-top:-40px;
+
+    #button_on_hero {
+        margin-top: -3vh;
     }
 }
