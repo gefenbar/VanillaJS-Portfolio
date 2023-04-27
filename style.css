@@ -610,7 +610,9 @@ footer {
 
     #projects_section {
         padding: 0;
-        padding-top: 4vh;
+        /* padding-top: 4vh; */
+        height: auto;
+
     }
 
     .col {
@@ -625,8 +627,9 @@ footer {
     }
 
     #skills_section {
-        /* padding: 15vh; */
-        padding-top: 10vh;
+        padding: 15vh;
+        /* padding-top: 10vh; */
+        height: auto;
     }
 
     #about_me_container {
@@ -645,5 +648,8 @@ footer {
 
     #button_on_hero {
         margin-top: -3vh;
+    }
+    #about_me_section{
+        height: 150vh;
     }
 }
