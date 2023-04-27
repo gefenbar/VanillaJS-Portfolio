@@ -666,4 +666,9 @@ footer {
     #about_me_text {
         width: 90%;
     }
+
+    #experience h1 {
+        padding-top: 10px;
+
+    }
 }
