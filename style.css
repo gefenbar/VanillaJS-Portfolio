@@ -324,7 +324,7 @@ body {
 }
 
 .container-circle .circle img {
-    max-width: 100%;
+    max-width: 60%;
     max-height: 100%;
     margin: auto;
 }
