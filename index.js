@@ -43,14 +43,6 @@ function TypeWriter(target, text, delay, clearText = false) {
 
 
 
-
-
-
-
-
-
-
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -156,7 +148,7 @@ function toggleTheme() {
     body.classList.remove("dark-theme");
     button.innerHTML = 'Dark <br> mode';
     removeDarkTheme();
-  } 
+  }
   else {
     body.classList.add("dark-theme");
     button.innerHTML = 'Light <br> mode';
@@ -166,7 +158,4 @@ function toggleTheme() {
 
 // Add event listener to toggle button
 const toggleBtn = document.querySelector("#dark_light_button");
-// toggleBtn.addEventListener("click", ChangeLightDark)
 toggleBtn.addEventListener("click", toggleTheme);
-
-

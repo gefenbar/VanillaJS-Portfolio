@@ -28,9 +28,11 @@ details {
     color: var(--text-color);
 }
 
+#nav-toggle {
+    display: none;
+}
 
 
-;
 
 /* Global styles */
 * {
@@ -211,7 +213,7 @@ body {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 
@@ -578,18 +580,23 @@ footer {
         padding: 10px;
     }
 
+    #nav ul li a.menu_item {
+        font-size: 95%;
+    }
+
     #logo {
         display: none
     }
 
     #nav ul {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
+
     }
 
     #nav ul li {
-        margin: 10px 0;
-        margin-left: -70px;
+        margin: 10px;
+        /* margin-left: -70px; */
     }
 
     .projects {
@@ -627,13 +634,13 @@ footer {
 
     #skills_section {
         padding-top: 2vh;
-        padding-bottom: 15vh;
+        padding-bottom: 125vh;
         /* height: auto; */
     }
 
     #about_me_container {
         height: auto;
-        width: 100%;;
+        width: 100%;
 
     }
 
@@ -648,7 +655,9 @@ footer {
     #button_on_hero {
         margin-top: -3vh;
     }
-    #about_me_section{
-        height: 150vh;
+
+    #about_me_section {
+        height: 250vh;
     }
+
 }
