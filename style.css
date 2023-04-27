@@ -635,7 +635,6 @@ footer {
     #skills_section {
         padding-top: 2vh;
         padding-bottom: 125vh;
-        /* height: auto; */
     }
 
     #about_me_container {
@@ -648,16 +647,23 @@ footer {
         margin-right: 2rem;
     }
 
-    #hero {
-        height: 135vh;
-    }
 
     #button_on_hero {
         margin-top: -3vh;
     }
 
     #about_me_section {
-        height: 250vh;
+        height: 135vh;
     }
 
+    #about_me_text h1 {
+        line-height: 1.2;
+        padding-bottom: 2vh;
+
+
+    }
+
+    #about_me_text {
+        width: 90%;
+    }
 }
