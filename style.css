@@ -1,9 +1,9 @@
 /* :root { */
-    /* --primary-color: #123C69; */
-    /* --secondary-color: #FF7D00; */
-    /* --tertiary-color: #C9F0FF; */
-    /* --text-color: #666; */
-    /* --link-color: rgb(18, 48, 48); */
+/* --primary-color: #123C69; */
+/* --secondary-color: #FF7D00; */
+/* --tertiary-color: #C9F0FF; */
+/* --text-color: #666; */
+/* --link-color: rgb(18, 48, 48); */
 /* } */
 
 body.dark-mode {
@@ -590,6 +590,7 @@ footer {
 
     #nav ul li {
         margin: 10px 0;
+        margin-left: -70px;
     }
 
     .projects {
@@ -636,5 +637,9 @@ footer {
 
     #about_me_text {
         margin-right: 2rem;
+    }
+
+    #hero{
+        height: 150vh;
     }
 }
