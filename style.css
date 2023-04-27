@@ -354,6 +354,15 @@ body {
     position: relative;
     height: 450px;
     background-color: #f8f8f8;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+    justify-content: space-between;
+
+
+
 }
 
 #about_me_container:before {
@@ -405,17 +414,7 @@ body {
 }
 
 
-#about_me_container {
-    width: 80%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-}
 
 #about_me_text {
     max-width: 1200px;
@@ -627,15 +626,15 @@ footer {
     }
 
     #skills_section {
-        padding: 15vh;
-        /* padding-top: 10vh; */
-        height: auto;
+        padding-top: 2vh;
+        padding-bottom: 15vh;
+        /* height: auto; */
     }
 
     #about_me_container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        height: auto;
+        width: 100%;;
+
     }
 
     #about_me_text {
