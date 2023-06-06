@@ -1,20 +1,20 @@
-var text_first = "Hi, my name is"
-var text_second = "Gefen Bar."
-var text_third = "I'm a Software Developer."
-var text_fourth = "I'm a Highly motivated and proactive software developer eager to contribute to a tech-leading company."
-var type_first = document.getElementById("h1_on_hero")
-var type_second = document.getElementById("h2_on_hero")
-var type_third = document.getElementById("h3_on_hero")
-var type_fourth = document.getElementById("h4_on_hero")
-var text_place = 0
+const text_first = "Hi, my name is";
+const text_second = "Gefen Bar.";
+const text_third = "I'm a Software Developer.";
+const text_fourth = "I'm a Highly motivated and proactive software developer eager to contribute to a tech-leading company.";
 
-TypeWriter(type_first, text_first, 100)
-setTimeout(function () { TypeWriter(type_second, text_second, 100) }, 1600)
-setTimeout(function () { TypeWriter(type_third, text_third, 100) }, 3000)
-setTimeout(function () { TypeWriter(type_fourth, text_fourth, 60) }, 5700)
-setTimeout(ShowButton, 12000)
-var writer_delay = 114
+const type_first = document.getElementById("h1_on_hero");
+const type_second = document.getElementById("h2_on_hero");
+const type_third = document.getElementById("h3_on_hero");
+const type_fourth = document.getElementById("h4_on_hero");
+let text_place = 0;
 
+TypeWriter(type_first, text_first, 100);
+setTimeout(() => TypeWriter(type_second, text_second, 100), 1600);
+setTimeout(() => TypeWriter(type_third, text_third, 100), 3000);
+setTimeout(() => TypeWriter(type_fourth, text_fourth, 60), 5700);
+setTimeout(ShowButton, 12000);
+let writer_delay = 114;
 
 function TypeWriter(target, text, delay, clearText = false) {
   if (target.textContent === text) {
@@ -26,136 +26,104 @@ function TypeWriter(target, text, delay, clearText = false) {
   let _delay = 0;
   for (let i = 0; i < text.length; i++) {
     _delay += delay;
-    window.setTimeout(function () {
-
-      if (target.textContent != text) {
+    window.setTimeout(() => {
+      if (target.textContent !== text) {
         target.textContent += "|";
-        setTimeout(function () {
-          target.textContent = target.textContent.replace("|", text[i])
-          if (target == type_fourth) {
-            writer_delay -= 6
+        setTimeout(() => {
+          target.textContent = target.textContent.replace("|", text[i]);
+          if (target === type_fourth) {
+            writer_delay -= 6;
           }
-        }, writer_delay)
+        }, writer_delay);
       }
     }, _delay);
   }
 }
 
-
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('show')
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
     }
-    else {
-      entry.target.classList.remove('show')
-    }
-  })
-})
-const hiddenElements = document.querySelectorAll('.hidden')
-hiddenElements.forEach((el) => observer.observe(el))
+  });
+});
 
-
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 
 const details = document.querySelectorAll("details");
 details.forEach((targetDetail) => {
   targetDetail.addEventListener("click", () => {
-    // Close all the details that are not targetDetail.
     details.forEach((detail) => {
       if (detail !== targetDetail) {
-        detail.removeAttribute("open")
+        detail.removeAttribute("open");
       }
-    })
-  })
-})
-
+    });
+  });
+});
 
 function ShowButton() {
-  document.getElementById('button_on_hero').style.visibility = "visible"
+  document.getElementById('button_on_hero').style.visibility = "visible";
 }
 
 function MobileNav() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+  const x = document.getElementById("myLinks");
+  x.style.display = (x.style.display === "block") ? "none" : "block";
 }
 
-x = document.querySelectorAll('#myLinks a')
-x.forEach(el => el.addEventListener('click', () => {
-  document.getElementById("myLinks").style.display = "none"
-}))
+const links = document.querySelectorAll('#myLinks a');
+links.forEach((el) => el.addEventListener('click', () => {
+  document.getElementById("myLinks").style.display = "none";
+}));
 
-
-// Get the body element
 const body = document.body;
-
-// Get all elements that need to be changed to dark theme
 const navBar = document.querySelector("#nav");
+const navTexts = document.querySelectorAll("#nav ul li a.menu_item")
 const mainContent = document.querySelector("body");
-const exp_section = document.querySelector("details");
+const sections = document.querySelectorAll("section")
+const aboutMe = document.getElementById("about_me_container")
+const experience = document.getElementById('experience')
+const experienceContent = document.querySelectorAll('#experience div')
+const headlines = document.querySelectorAll("h1,h2,h3,h4")
+const footer = document.querySelector('footer')
 
-// console.log(navBar);
-// console.log(mainContent);
-// console.log(exp_section);
-
-// Define styles for dark theme
-const darkTheme = {
-  "--primary-color": "black",
-  "--secondary-color": "gray",
-  "--tertiary-color": "blue",
-  "--text-color": "white"
-}
-// Function to apply dark theme to all elements
 function applyDarkTheme() {
-  // Apply dark theme to body element
-  Object.keys(darkTheme).forEach((key) => {
-    body.style.setProperty(key, darkTheme[key]);
-  });
-
-  // Apply dark theme to other elements
-  console.log(navBar);
-  console.log(mainContent);
-  console.log(exp_section);
-
-  navBar.classList.add("navbar-dark");
-  mainContent.classList.add("bg-dark", "text-white");
-  exp_section.classList.add("bg-dark", "text-white");
+  experienceContent.forEach((obj) => obj.classList.add("dark"))
+  navTexts.forEach((text) => text.classList.add("dark"))
+  sections.forEach((section) => section.classList.add("dark"))
+  headlines.forEach((head) => head.classList.add("dark"))
+  footer.classList.add("dark")
+  navBar.classList.add("dark");
+  mainContent.classList.add("dark");
+  aboutMe.classList.add("dark")
+  experience.classList.add("dark")
 }
 
-// Function to remove dark theme from all elements
 function removeDarkTheme() {
-  // Remove dark theme from body element
-  Object.keys(darkTheme).forEach((key) => {
-    body.style.removeProperty(key);
-  });
+  experienceContent.forEach((obj) => obj.classList.remove("dark"))
+  navTexts.forEach((text) => text.classList.remove("dark"))
+  sections.forEach((section) => section.classList.remove("dark"))
+  headlines.forEach((head) => head.classList.remove("dark"))
+  footer.classList.remove("dark")
+  navBar.classList.remove("dark");
+  mainContent.classList.remove("dark");
+  aboutMe.classList.remove("dark")
+  experience.classList.remove("dark")
 
-  // Remove dark theme from other elements
-  navBar.classList.remove("navbar-dark");
-  mainContent.classList.remove("bg-dark", "text-white");
-  exp_section.classList.remove("bg-dark", "text-white");
 }
 
-// Function to toggle between light and dark theme
 function toggleTheme() {
-  // const body = document.body;
   const button = document.querySelector('#dark_light_button');
-
-  if (body.classList.contains("dark-theme")) {
-    body.classList.remove("dark-theme");
+  if (body.classList.contains("dark")) {
+    removeDarkTheme()
     button.innerHTML = 'Dark <br> mode';
-    removeDarkTheme();
-  }
-  else {
-    body.classList.add("dark-theme");
+  } else {
+    applyDarkTheme()
     button.innerHTML = 'Light <br> mode';
-    applyDarkTheme();
   }
 }
 
-// Add event listener to toggle button
 const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
