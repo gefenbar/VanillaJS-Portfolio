@@ -700,6 +700,7 @@
 
      #about_me_section {
          height: auto;
+         z-index: 500;
      }
 
      #about_me_text h1 {
