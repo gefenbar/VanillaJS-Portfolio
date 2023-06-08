@@ -50,7 +50,7 @@
      left: 0;
      width: 100%;
      background-color: #fff;
-     z-index: 10000;
+     z-index: 1;
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
  }
 
@@ -699,7 +699,7 @@
      }
 
      #about_me_section {
-         height: 120vh;
+         height: auto;
      }
 
      #about_me_text h1 {
