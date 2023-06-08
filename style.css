@@ -9,9 +9,7 @@
  .dark {
      background-color: #16213E !important;
      color: white !important;
-     /* --primary-color: rgb(117, 117, 131); */
-     /* --secondary-color: black; */
-     /* --tertiary-color: #16213E; */
+ 
  }
 
  #nav-toggle {
@@ -25,7 +23,7 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace !important;
+     font-family: 'Courier New', Courier, monospace !important;
  }
 
  .hidden {
@@ -52,7 +50,7 @@
      left: 0;
      width: 100%;
      background-color: #fff;
-     z-index: 1;
+     z-index: 10000;
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
  }
 
@@ -550,6 +548,77 @@
      padding-bottom: 10px;
  }
 
+ h5 {
+     font-size: 20px;
+     font-weight: bold;
+     color: white;
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+     margin-bottom: 30px;
+     font-family: 'Courier New', Courier, monospace !important;
+
+ }
+
+ /* Responsive styles */
+/* @media only screen and (max-width: 768px) {
+    #nav {
+      flex-direction: column;
+      padding: 10px;
+    }
+    #nav ul li {
+      margin: 10px;
+    }
+    .projects {
+      flex-direction: column;
+      align-items: center;
+    }
+    .projects button {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    #hero h4 {
+      padding: 3%;
+    }
+    #projects_section {
+      padding: 0;
+    }
+    .col {
+      width: 100%;
+      padding: 15px;
+    }
+    .container-circle {
+      width: 120px;
+      height: 120px;
+    }
+    #skills_section {
+      padding-top: 2vh;
+      padding-bottom: 125vh;
+    }
+    #about_me_container {
+      height: auto;
+      width: 100%;
+    }
+    #about_me_text {
+      margin-right: 2rem;
+    }
+    #button_on_hero {
+      margin-top: -3vh;
+    }
+    #about_me_section {
+      height: 120vh;
+    }
+    #about_me_text h1 {
+      line-height: 1.2;
+      padding-bottom: 2vh;
+    }
+    #about_me_text {
+      width: 90%;
+    }
+    #experience h1 {
+      padding-top: 10px;
+    }
+  }
+ */
+
  /* Responsive styles */
  @media only screen and (max-width: 768px) {
      #nav {
@@ -636,7 +705,7 @@
      #about_me_text h1 {
          line-height: 1.2;
          padding-bottom: 2vh;
-
+         /* background-color: #123C69 !important; */
 
      }
 
@@ -650,12 +719,4 @@
      }
  }
 
- h5 {
-     font-size: 20px;
-     font-weight: bold;
-     color: white;
-     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-     margin-bottom: 30px;
-     font-family: 'Courier New', Courier, monospace !important;
-
- }
+  
