@@ -88,6 +88,7 @@ const experience = document.getElementById('experience')
 const experienceContent = document.querySelectorAll('#experience div')
 const headlines = document.querySelectorAll("h1,h2,h3,h4")
 const footer = document.querySelector('footer')
+const themeBtn=document.getElementById('dark_light_button')
 
 function applyDarkTheme() {
   experienceContent.forEach((obj) => obj.classList.add("dark"))
@@ -99,6 +100,9 @@ function applyDarkTheme() {
   mainContent.classList.add("dark");
   aboutMe.classList.add("dark")
   experience.classList.add("dark")
+  themeBtn.style.backgroundColor='white'
+  themeBtn.style.color='#16213E'
+
 }
 
 function removeDarkTheme() {
@@ -111,6 +115,9 @@ function removeDarkTheme() {
   mainContent.classList.remove("dark");
   aboutMe.classList.remove("dark")
   experience.classList.remove("dark")
+  themeBtn.style.backgroundColor='#16213E'
+  themeBtn.style.color='white'
+
 
 }
 
