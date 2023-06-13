@@ -1,7 +1,7 @@
 const text_first = "Hi, my name is";
-const text_second = "Gefen Bar.";
+const text_second = "Gefen Bar";
 const text_third = "I'm a Software Developer.";
-const text_fourth = "I'm a Highly motivated and proactive software developer eager to contribute to a tech-leading company.";
+const text_fourth = "I'm a Highly motivated and proactive eager to contribute to a tech-leading company.";
 
 const type_first = document.getElementById("h1_on_hero");
 const type_second = document.getElementById("h2_on_hero");
@@ -88,7 +88,7 @@ const experience = document.getElementById('experience')
 const experienceContent = document.querySelectorAll('#experience div')
 const headlines = document.querySelectorAll("h1,h2,h3,h4")
 const footer = document.querySelector('footer')
-const themeBtn=document.getElementById('dark_light_button')
+const themeBtn = document.getElementById('dark_light_button')
 
 function applyDarkTheme() {
   experienceContent.forEach((obj) => obj.classList.add("dark"))
@@ -100,8 +100,8 @@ function applyDarkTheme() {
   mainContent.classList.add("dark");
   aboutMe.classList.add("dark")
   experience.classList.add("dark")
-  themeBtn.style.backgroundColor='white'
-  themeBtn.style.color='#16213E'
+  themeBtn.style.backgroundColor = 'white'
+  themeBtn.style.color = '#16213E'
 
 }
 
@@ -115,8 +115,8 @@ function removeDarkTheme() {
   mainContent.classList.remove("dark");
   aboutMe.classList.remove("dark")
   experience.classList.remove("dark")
-  themeBtn.style.backgroundColor='#16213E'
-  themeBtn.style.color='white'
+  themeBtn.style.backgroundColor = '#16213E'
+  themeBtn.style.color = 'white'
 
 
 }
