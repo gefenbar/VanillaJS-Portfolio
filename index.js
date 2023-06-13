@@ -1,7 +1,7 @@
 const text_first = "Hi, my name is";
 const text_second = "Gefen Bar";
 const text_third = "I'm a Software Developer.";
-const text_fourth = "I'm a Highly motivated and proactive eager to contribute to a tech-leading company.";
+const text_fourth = "I'm Highly motivated and proactive eager to contribute to a tech-leading company.";
 
 const type_first = document.getElementById("h1_on_hero");
 const type_second = document.getElementById("h2_on_hero");
