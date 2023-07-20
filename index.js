@@ -13,7 +13,7 @@ TypeWriter(type_first, text_first, 100);
 setTimeout(() => TypeWriter(type_second, text_second, 100), 1600);
 setTimeout(() => TypeWriter(type_third, text_third, 100), 3000);
 setTimeout(() => TypeWriter(type_fourth, text_fourth, 60), 5700);
-setTimeout(ShowButton, 12000);
+setTimeout(ShowButton, 11000);
 let writer_delay = 114;
 
 function TypeWriter(target, text, delay, clearText = false) {
