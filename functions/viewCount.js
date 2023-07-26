@@ -10,8 +10,13 @@ exports.handler = async function (event, context) {
 
   viewCount++;
 
+
   return {
     statusCode: 200,
     body: JSON.stringify({ viewCount }),
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+    },
   };
 };
