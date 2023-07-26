@@ -140,7 +140,7 @@ function toggleTheme() {
 const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
 
-const functionEndpoint = '/netlify/functions/viewCount'; 
+const functionEndpoint = '/.netlify/functions/viewCount'; 
 // Replace 'function-name' with the actual name of your serverless function
 // Function to update view count on the client-side
 
