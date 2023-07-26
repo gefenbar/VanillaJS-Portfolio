@@ -141,20 +141,25 @@ const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
 
 const functionEndpoint = '/.netlify/functions/viewCount';
+const viewCountElement = document.getElementById('view-count');
+const delay = 100; // Set the delay (in milliseconds) between each number increment
 
 async function updateViewCount() {
   try {
-    // Check if the cookie is present
-    const viewed = getCookie('viewed');
-    if (!viewed) {
-      const response = await fetch(functionEndpoint);
-      const data = await response.json();
-      const viewCount = data.viewCount;
-      document.getElementById('view-count').textContent = viewCount;
+    const response = await fetch(functionEndpoint);
+    const data = await response.json();
+    const views = data.viewCount;
 
-      // Set the cookie to indicate that the view has been counted
-      setCookie('viewed', 'true', 365);
-    }
+    let currentCount = 0;
+
+    const interval = setInterval(() => {
+      viewCountElement.textContent = currentCount;
+      currentCount++;
+
+      if (currentCount > views) {
+        clearInterval(interval);
+      }
+    }, delay);
   } catch (error) {
     console.error('Error updating view count:', error);
   }
@@ -162,30 +167,6 @@ async function updateViewCount() {
 
 // Call the function to update view count on page load
 updateViewCount();
-
-// Helper functions to handle cookies
-function setCookie(name, value, days) {
-  const date = new Date();
-  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-  const expires = 'expires=' + date.toUTCString();
-  document.cookie = name + '=' + value + ';' + expires + ';path=/';
-}
-
-function getCookie(name) {
-  const cookieName = name + '=';
-  const decodedCookie = decodeURIComponent(document.cookie);
-  const cookieArray = decodedCookie.split(';');
-  for (let i = 0; i < cookieArray.length; i++) {
-    let cookie = cookieArray[i];
-    while (cookie.charAt(0) === ' ') {
-      cookie = cookie.substring(1);
-    }
-    if (cookie.indexOf(cookieName) === 0) {
-      return cookie.substring(cookieName.length, cookie.length);
-    }
-  }
-  return '';
-}
 
 
 // const downloadFunctionEndpoint = '/.netlify/functions/downloadCount';
