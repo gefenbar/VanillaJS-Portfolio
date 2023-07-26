@@ -658,7 +658,7 @@ h5 {
 }
 
 /* CSS for Views Count Section */
-#view-count,#download-count {
+#view-count {
     font-size: 24px;
     font-weight: bold;
     color: #ff4a57; /* Red color for the count */
@@ -690,49 +690,39 @@ h5 {
   }
   
 /* CSS for "Views" section */
-#views-container,
-#downloads-container {
-  position: fixed;
-  left: 20px;
-  display: flex;
-  align-items: center;
-}
-
 #views-container {
-  bottom: 80px;
-}
-
-#downloads-container {
-  bottom: 20px;
-}
-
-#view-text,
-#download-text {
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 8px;
-}
-
-#view-count,#download-count {
-  display: inline-block;
-  background-color: #ff4a57;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  margin-left: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease-in-out;
-}
-
-#view-count.loading,
-#download-count.loading {
-  background-color: #16213E;
-}
-
-#view-count:hover,
-#download-count:hover {
-  background-color: #ff0f0f;
-  transform: scale(1.05);
-}
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  #view-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  #view-count {
+    display: inline-block;
+    background-color: #ff4a57;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  #view-count.loading {
+    background-color: #16213E;
+  }
+  
+  #view-count:hover {
+    background-color: #ff0f0f;
+    transform: scale(1.05);
+  }
+  

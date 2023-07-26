@@ -173,6 +173,7 @@ const downloadFunctionEndpoint = '/.netlify/functions/downloadCount';
 
 // Function to update download count on the client-side
 async function updateDownloadCount() {
+  console.log('a')
   try {
     const response = await fetch(downloadFunctionEndpoint);
     const data = await response.json();
