@@ -656,3 +656,73 @@ h5 {
 
     }
 }
+
+/* CSS for Views Count Section */
+#view-count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4a57; /* Red color for the count */
+    animation: pulse 2s infinite; /* Animation for the count */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* CSS for the entire p element */
+  p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Additional styles for the text and span inside the p */
+  p span {
+    color: #16213E; /* Dark blue color for the "Loading..." text */
+    font-style: italic;
+  }
+  
+/* CSS for "Views" section */
+#views-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  #view-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  #view-count {
+    display: inline-block;
+    background-color: #ff4a57;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  #view-count.loading {
+    background-color: #16213E;
+  }
+  
+  #view-count:hover {
+    background-color: #ff0f0f;
+    transform: scale(1.05);
+  }
+  

@@ -89,6 +89,7 @@ const experienceContent = document.querySelectorAll('#experience div')
 const headlines = document.querySelectorAll("h1,h2,h3,h4")
 const footer = document.querySelector('footer')
 const themeBtn = document.getElementById('dark_light_button')
+const counter = document.querySelector('#view-count.loading')
 
 function applyDarkTheme() {
   experienceContent.forEach((obj) => obj.classList.add("dark"))
@@ -102,6 +103,9 @@ function applyDarkTheme() {
   experience.classList.add("dark")
   themeBtn.style.backgroundColor = 'white'
   themeBtn.style.color = '#16213E'
+  counter.style.backgroundColor='white'
+  counter.style.color='#16213E'
+
 
 }
 
@@ -117,7 +121,8 @@ function removeDarkTheme() {
   experience.classList.remove("dark")
   themeBtn.style.backgroundColor = '#16213E'
   themeBtn.style.color = 'white'
-
+  counter.style.backgroundColor='#16213E'
+  counter.style.color='white'
 
 }
 
@@ -134,3 +139,19 @@ function toggleTheme() {
 
 const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
+
+// Function to update view count on the client-side
+async function updateViewCount() {
+  try {
+    const response = await fetch('http://127.0.0.1:3004/api/view'); // Change the port to 3004
+    const data = await response.json();
+    const viewCount = data.viewCount;
+    // Update the view count on the webpage
+    document.getElementById('view-count').textContent = viewCount;
+  } catch (error) {
+    console.error('Error updating view count:', error);
+  }
+}
+
+// Call the function to update view count on page load
+updateViewCount();
