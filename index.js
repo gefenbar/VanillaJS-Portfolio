@@ -167,3 +167,22 @@ async function updateViewCount() {
 
 // Call the function to update view count on page load
 updateViewCount();
+
+
+const downloadFunctionEndpoint = '/.netlify/functions/downloadCount';
+
+// Function to update download count on the client-side
+async function updateDownloadCount() {
+  try {
+    const response = await fetch(downloadFunctionEndpoint);
+    const data = await response.json();
+    const downloadCount = data.downloadCount;
+    document.getElementById('download-count').textContent = downloadCount;
+  } catch (error) {
+    console.error('Error updating download count:', error);
+  }
+}
+
+// Call the function to update download count when the resume link is clicked
+const resumeDownloadLink = document.getElementById('button_on_hero');
+resumeDownloadLink.addEventListener('click', updateDownloadCount);
