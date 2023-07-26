@@ -140,19 +140,20 @@ function toggleTheme() {
 const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
 
+const functionEndpoint = '/.netlify/functions/viewCount.js'; 
+// Replace 'function-name' with the actual name of your serverless function
 // Function to update view count on the client-side
+
 async function updateViewCount() {
   try {
-    const response = await fetch('/.netlify/functions/viewCount');
+    const response = await fetch(functionEndpoint);
     const data = await response.json();
     const viewCount = data.viewCount;
-    // Update the view count on the webpage
     document.getElementById('view-count').textContent = viewCount;
   } catch (error) {
     console.error('Error updating view count:', error);
   }
 }
-
 
 // Call the function to update view count on page load
 updateViewCount();
