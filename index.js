@@ -140,7 +140,7 @@ function toggleTheme() {
 const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
 
-const functionEndpoint = '/netlify/functions/viewCount';
+const functionEndpoint = '/.netlify/functions/viewCount';
 const viewCountElement = document.getElementById('view-count');
 
 async function updateViewCount() {
