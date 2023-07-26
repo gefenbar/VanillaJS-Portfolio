@@ -142,13 +142,14 @@ toggleBtn.addEventListener("click", toggleTheme);
 
 const functionEndpoint = '/.netlify/functions/viewCount';
 const viewCountElement = document.getElementById('view-count');
+const delay = 100; // Set the delay (in milliseconds) between each number increment
 
 async function updateViewCount() {
   try {
     const response = await fetch(functionEndpoint);
     const data = await response.json();
     const views = data.viewCount;
-    const delay = 100; // Set the delay (in milliseconds) between each number increment
+
     let currentCount = 0;
 
     const interval = setInterval(() => {
