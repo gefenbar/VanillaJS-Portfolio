@@ -103,8 +103,8 @@ function applyDarkTheme() {
   experience.classList.add("dark")
   themeBtn.style.backgroundColor = 'white'
   themeBtn.style.color = '#16213E'
-  counter.style.backgroundColor='white'
-  counter.style.color='#16213E'
+  counter.style.backgroundColor = 'white'
+  counter.style.color = '#16213E'
 
 
 }
@@ -121,8 +121,8 @@ function removeDarkTheme() {
   experience.classList.remove("dark")
   themeBtn.style.backgroundColor = '#16213E'
   themeBtn.style.color = 'white'
-  counter.style.backgroundColor='#16213E'
-  counter.style.color='white'
+  counter.style.backgroundColor = '#16213E'
+  counter.style.color = 'white'
 
 }
 
@@ -143,7 +143,7 @@ toggleBtn.addEventListener("click", toggleTheme);
 // Function to update view count on the client-side
 async function updateViewCount() {
   try {
-    const response = await fetch('http://127.0.0.1:3004/api/view'); // Change the port to 3004
+    const response = await fetch('/.netlify/functions/viewCount');
     const data = await response.json();
     const viewCount = data.viewCount;
     // Update the view count on the webpage
@@ -152,6 +152,7 @@ async function updateViewCount() {
     console.error('Error updating view count:', error);
   }
 }
+
 
 // Call the function to update view count on page load
 updateViewCount();
