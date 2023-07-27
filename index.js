@@ -139,7 +139,6 @@ function toggleTheme() {
 
 const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
-
 const functionEndpointView = '/.netlify/functions/viewCount';
 const functionEndpointDownload = '/.netlify/functions/downloadCount';
 
@@ -176,11 +175,8 @@ async function incrementDownloadCount() {
 
 // Call the functions to update view and download counts on page load
 updateViewCount();
-updateDownloadCount(); // Initialize the download count on page load
 
 document.getElementById("button_on_hero").addEventListener('click', incrementDownloadCount);
-
-
 
 // const downloadFunctionEndpoint = '/.netlify/functions/downloadCount';
 
