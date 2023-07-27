@@ -206,7 +206,7 @@ body {
 /* Projects section styles */
 #projects_section {
     height: 100vh;
-    padding-top: 30vh;
+    padding-top: 10%;
     background-color: #f8f8f8;
     padding-right: 5vh;
     padding-left: 5vh;
@@ -267,7 +267,7 @@ body {
 
 #skills_section {
     background-color: #f2f2f2;
-    padding-top: 25vh;
+    padding-top: 10%;
     text-align: center;
     height: 100vh;
 }
@@ -342,9 +342,6 @@ body {
     border-radius: 10px;
     max-width: 1200px;
     justify-content: space-between;
-
-
-
 }
 
 #about_me_container:before {
