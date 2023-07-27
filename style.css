@@ -125,7 +125,6 @@ body {
 #hero_section {
     position: relative;
     height: 100vh;
-    
 }
 
 
@@ -138,46 +137,49 @@ body {
 }
 
 #hero h1 {
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  #hero h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: black;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-
-  #hero h3 {
     font-size: 20px;
     font-weight: bold;
     color: black;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
-  }
 
-  #hero h4 {
-    font-size: 16px;
+}
+
+#hero h2 {
+    font-size: 35px;
     font-weight: bold;
     color: black;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
-  }
-  #hero p {
-    font-size: 60px;
-    color: #fff;
+
+}
+
+#hero h3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 30px;
-  }
+    text-align: center;
+}
+
+#hero h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#hero p {
+    font-size: 80px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 50px;
+}
 
 #button_on_hero {
     padding: 15px 30px;
@@ -204,7 +206,7 @@ body {
 /* Projects section styles */
 #projects_section {
     height: 100vh;
-    padding-top: 30vh;
+    padding-top: 15vh;
     background-color: #f8f8f8;
     padding-right: 5vh;
     padding-left: 5vh;
@@ -265,7 +267,7 @@ body {
 
 #skills_section {
     background-color: #f2f2f2;
-    padding-top: 25vh;
+    padding-top: 15vh;
     text-align: center;
     height: 100vh;
 }
@@ -320,28 +322,31 @@ body {
 
 
 #about_me_section {
-    padding: 15vh 0;
-    height: auto;
+    padding: 35vh 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 50px; */
+    padding: 50px;
     overflow: hidden;
-  }
-  
 
-  #about_me_container {
+}
+
+#about_me_container {
     position: relative;
-    height: auto;
+    height: 450px;
     background-color: #f8f8f8;
     align-items: center;
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    max-width: 100%;
+    max-width: 1200px;
     justify-content: space-between;
-  }
-  
+
+
+
+}
+
 #about_me_container:before {
     content: "";
     position: absolute;
@@ -585,21 +590,14 @@ h5 {
     .projects button {
         margin-right: 0;
         margin-bottom: 20px;
-        /* height: 120px; */
     }
 
     #hero h4 {
-        font-size: 16px;
-        font-weight: bold;
-        color: black;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        margin-bottom: 20px;
-        text-align: center;
-      }
+        padding: 3%;
+    }
 
     #projects_section {
         padding: 0;
-        /* padding-top: 4vh; */
         height: auto;
 
     }
@@ -607,7 +605,6 @@ h5 {
     .col {
         width: 100%;
         padding: 15px;
-        /* text-align: center; */
     }
 
     .container-circle {
@@ -615,10 +612,10 @@ h5 {
         height: 120px;
     }
 
-    #skills_section {
-        padding-top: 2vh;
+    /* #skills_section {
+        padding-top: 15vh;
         padding-bottom: 125vh;
-    }
+    } */
 
     #about_me_container {
         height: auto;
@@ -661,34 +658,39 @@ h5 {
 #view-count {
     font-size: 24px;
     font-weight: bold;
-    color: #ff4a57; /* Red color for the count */
-    animation: pulse 10s infinite; /* Animation for the count */
-  }
-  
-  @keyframes pulse {
+    color: #ff4a57;
+    /* Red color for the count */
+    animation: pulse 10s infinite;
+    /* Animation for the count */
+}
+
+@keyframes pulse {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.2);
+        transform: scale(1.2);
     }
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
-  /* CSS for the entire p element */
-  p {
+}
+
+/* CSS for the entire p element */
+p {
     text-align: center;
     margin-top: 20px;
-  }
-  
-  /* Additional styles for the text and span inside the p */
-  p span {
-    color: #16213E; /* Dark blue color for the "Loading..." text */
+}
+
+/* Additional styles for the text and span inside the p */
+p span {
+    color: #16213E;
+    /* Dark blue color for the "Loading..." text */
     font-style: italic;
-  }
-  
+}
+
 /* CSS for "Views" section */
 #views-container {
     position: fixed;
@@ -696,15 +698,15 @@ h5 {
     left: 20px;
     display: flex;
     align-items: center;
-  }
-  
-  #view-text {
+}
+
+#view-text {
     font-size: 18px;
     font-weight: bold;
     margin-right: 8px;
-  }
-  
-  #view-count {
+}
+
+#view-count {
     display: inline-block;
     background-color: #ff4a57;
     color: white;
@@ -715,14 +717,13 @@ h5 {
     margin-left: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease-in-out;
-  }
-  
-  #view-count.loading {
+}
+
+#view-count.loading {
     background-color: #16213E;
-  }
-  
-  #view-count:hover {
+}
+
+#view-count:hover {
     background-color: #ff0f0f;
     transform: scale(1.05);
-  }
-  
+}
