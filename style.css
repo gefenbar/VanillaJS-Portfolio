@@ -402,7 +402,9 @@ body {
     text-align: center;
 }
 
-
+#experience_section {
+    padding-top:15vh;
+}
 
 
 #experience {
@@ -612,8 +614,9 @@ h5 {
         height: 120px;
     }
 
-    #experience_section {
+    #skills_section {
         padding-top: 15vh;
+        padding-bottom: 125vh;
     }
 
     #about_me_container {
