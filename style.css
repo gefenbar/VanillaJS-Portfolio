@@ -652,7 +652,8 @@ h5 {
     }
 
     #about_me_text {
-        width: 90%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     #experience h1 {
