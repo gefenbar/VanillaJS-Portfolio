@@ -89,7 +89,8 @@ const experienceContent = document.querySelectorAll('#experience div')
 const headlines = document.querySelectorAll("h1,h2,h3,h4")
 const footer = document.querySelector('footer')
 const themeBtn = document.getElementById('dark_light_button')
-const counter = document.querySelector('#view-count.loading')
+const viewsCounter = document.querySelector('#view-count.loading')
+const downloadsCounter = document.querySelector('#download-count.loading')
 
 function applyDarkTheme() {
   experienceContent.forEach((obj) => obj.classList.add("dark"))
@@ -103,8 +104,10 @@ function applyDarkTheme() {
   experience.classList.add("dark")
   themeBtn.style.backgroundColor = 'white'
   themeBtn.style.color = '#16213E'
-  counter.style.backgroundColor = 'white'
-  counter.style.color = '#16213E'
+  viewsCounter.style.backgroundColor = 'white'
+  viewsCounter.style.color = '#16213E'
+  downloadsCounter.style.backgroundColor = 'white'
+  downloadsCounter.style.color = '#16213E'
 
 
 }
@@ -121,8 +124,11 @@ function removeDarkTheme() {
   experience.classList.remove("dark")
   themeBtn.style.backgroundColor = '#16213E'
   themeBtn.style.color = 'white'
-  counter.style.backgroundColor = '#16213E'
-  counter.style.color = 'white'
+  viewsCounter.style.backgroundColor = '#16213E'
+  viewsCounter.style.color = 'white'
+  downloadsCounter.style.backgroundColor = '#16213E'
+  downloadsCounter.style.color = 'white'
+
 
 }
 
