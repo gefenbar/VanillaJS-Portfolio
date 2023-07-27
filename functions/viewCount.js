@@ -12,6 +12,9 @@ exports.handler = async function (event, context) {
   // Increment the view count
   viewCount++;
 
+  // Update the environment variable with the new view count
+  process.env.VIEW_COUNT = viewCount;
+
   // Return the updated view count in the response
   return {
     statusCode: 200,
