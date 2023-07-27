@@ -206,7 +206,7 @@ body {
 /* Projects section styles */
 #projects_section {
     height: 100vh;
-    padding-top: 30vh;
+    padding-top: 15vh;
     background-color: #f8f8f8;
     padding-right: 5vh;
     padding-left: 5vh;
@@ -267,7 +267,7 @@ body {
 
 #skills_section {
     background-color: #f2f2f2;
-    padding-top: 25vh;
+    padding-top: 15vh;
     text-align: center;
     height: 100vh;
 }
@@ -322,7 +322,7 @@ body {
 
 
 #about_me_section {
-    padding: 35vh 0;
+    padding-top :15vh;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -616,8 +616,8 @@ h5 {
     }
 
     #skills_section {
-        padding-top: 2vh;
-        padding-bottom: 125vh;
+        padding-top: 1vh;
+        /* padding-bottom: 125vh; */
     }
 
     #about_me_container {
@@ -653,7 +653,6 @@ h5 {
 
     #experience h1 {
         padding-top: 10px;
-
     }
 }
 
