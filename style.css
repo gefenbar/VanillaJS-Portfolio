@@ -206,7 +206,7 @@ body {
 /* Projects section styles */
 #projects_section {
     height: 100vh;
-    padding-top: 15vh;
+    padding-top: 30vh;
     background-color: #f8f8f8;
     padding-right: 5vh;
     padding-left: 5vh;
@@ -267,7 +267,7 @@ body {
 
 #skills_section {
     background-color: #f2f2f2;
-    padding-top: 15vh;
+    padding-top: 25vh;
     text-align: center;
     height: 100vh;
 }
@@ -402,9 +402,7 @@ body {
     text-align: center;
 }
 
-#experience_section {
-    padding-top:15vh;
-}
+
 
 
 #experience {
@@ -592,6 +590,7 @@ h5 {
     .projects button {
         margin-right: 0;
         margin-bottom: 20px;
+        /* height: 120px; */
     }
 
     #hero h4 {
@@ -600,6 +599,7 @@ h5 {
 
     #projects_section {
         padding: 0;
+        /* padding-top: 4vh; */
         height: auto;
 
     }
@@ -607,6 +607,7 @@ h5 {
     .col {
         width: 100%;
         padding: 15px;
+        /* text-align: center; */
     }
 
     .container-circle {
@@ -615,7 +616,7 @@ h5 {
     }
 
     #skills_section {
-        padding-top: 15vh;
+        padding-top: 2vh;
         padding-bottom: 125vh;
     }
 
@@ -660,39 +661,34 @@ h5 {
 #view-count {
     font-size: 24px;
     font-weight: bold;
-    color: #ff4a57;
-    /* Red color for the count */
-    animation: pulse 10s infinite;
-    /* Animation for the count */
-}
-
-@keyframes pulse {
+    color: #ff4a57; /* Red color for the count */
+    animation: pulse 10s infinite; /* Animation for the count */
+  }
+  
+  @keyframes pulse {
     0% {
-        transform: scale(1);
+      transform: scale(1);
     }
-
     50% {
-        transform: scale(1.2);
+      transform: scale(1.2);
     }
-
     100% {
-        transform: scale(1);
+      transform: scale(1);
     }
-}
-
-/* CSS for the entire p element */
-p {
+  }
+  
+  /* CSS for the entire p element */
+  p {
     text-align: center;
     margin-top: 20px;
-}
-
-/* Additional styles for the text and span inside the p */
-p span {
-    color: #16213E;
-    /* Dark blue color for the "Loading..." text */
+  }
+  
+  /* Additional styles for the text and span inside the p */
+  p span {
+    color: #16213E; /* Dark blue color for the "Loading..." text */
     font-style: italic;
-}
-
+  }
+  
 /* CSS for "Views" section */
 #views-container {
     position: fixed;
@@ -700,15 +696,15 @@ p span {
     left: 20px;
     display: flex;
     align-items: center;
-}
-
-#view-text {
+  }
+  
+  #view-text {
     font-size: 18px;
     font-weight: bold;
     margin-right: 8px;
-}
-
-#view-count {
+  }
+  
+  #view-count {
     display: inline-block;
     background-color: #ff4a57;
     color: white;
@@ -719,13 +715,14 @@ p span {
     margin-left: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease-in-out;
-}
-
-#view-count.loading {
+  }
+  
+  #view-count.loading {
     background-color: #16213E;
-}
-
-#view-count:hover {
+  }
+  
+  #view-count:hover {
     background-color: #ff0f0f;
     transform: scale(1.05);
-}
+  }
+  
