@@ -403,7 +403,9 @@ body {
 }
 
 
-
+#experience_section{
+    padding-top: 15vh;
+}
 
 #experience {
     background-color: #f2f2f2;
