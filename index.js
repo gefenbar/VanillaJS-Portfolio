@@ -140,33 +140,46 @@ function toggleTheme() {
 const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
 
-const functionEndpoint = '/.netlify/functions/viewCount';
-const viewCountElement = document.getElementById('view-count');
-const delay = 100; // Set the delay (in milliseconds) between each number increment
+const functionEndpointView = '/.netlify/functions/viewCount';
+const functionEndpointDownload = '/.netlify/functions/downloadCount';
 
 async function updateViewCount() {
   try {
-    const response = await fetch(functionEndpoint);
+    const response = await fetch(functionEndpointView);
     const data = await response.json();
-    const views = data.viewCount;
-
-    let currentCount = 0;
-
-    const interval = setInterval(() => {
-      viewCountElement.textContent = currentCount;
-      currentCount++;
-
-      if (currentCount > views) {
-        clearInterval(interval);
-      }
-    }, delay);
+    const viewCount = data.viewCount;
+    document.getElementById('view-count').textContent = viewCount;
   } catch (error) {
     console.error('Error updating view count:', error);
   }
 }
 
-// Call the function to update view count on page load
+async function updateDownloadCount() {
+  try {
+    const response = await fetch(functionEndpointDownload);
+    const data = await response.json();
+    const downloadCount = data.downloadCount;
+    document.getElementById('download-count').textContent = downloadCount;
+  } catch (error) {
+    console.error('Error updating download count:', error);
+  }
+}
+
+async function incrementDownloadCount() {
+  try {
+    await fetch(functionEndpointDownload, { method: 'POST' });
+    updateDownloadCount(); // Update the download count after the increment
+  } catch (error) {
+    console.error('Error incrementing download count:', error);
+  }
+}
+
+// Call the functions to update view and download counts on page load
 updateViewCount();
+updateDownloadCount(); // Initialize the download count on page load
+
+document.getElementById("button_on_hero").addEventListener('click', incrementDownloadCount);
+
 
 
 // const downloadFunctionEndpoint = '/.netlify/functions/downloadCount';
