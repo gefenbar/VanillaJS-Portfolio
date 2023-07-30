@@ -1,20 +1,10 @@
-// serverless-function.js
-
-const fs = require('fs');
-
-const viewCountFilePath = 'viewCount.json';
-
-let viewCount = 0;
-
-// Read the view count from the storage (e.g., a file) on server startup
-fs.readFile(viewCountFilePath, 'utf8', (err, data) => {
-  if (!err) {
-    viewCount = Number(data);
-  }
-});
+let viewCount = Number(process.env.VIEW_COUNT);
 
 exports.handler = async function (event, context) {
   if (event.httpMethod === 'GET') {
+    viewCount++;
+    process.env.VIEW_COUNT = viewCount.toString();
+
     return {
       statusCode: 200,
       body: JSON.stringify({ viewCount }),
