@@ -15,14 +15,6 @@ fs.readFile(viewCountFilePath, 'utf8', (err, data) => {
 
 exports.handler = async function (event, context) {
   if (event.httpMethod === 'GET') {
-    viewCount++;
-    // Update the view count in the storage (e.g., a file)
-    fs.writeFile(viewCountFilePath, viewCount.toString(), 'utf8', (err) => {
-      if (err) {
-        console.error('Error updating view count:', err);
-      }
-    });
-
     return {
       statusCode: 200,
       body: JSON.stringify({ viewCount }),
