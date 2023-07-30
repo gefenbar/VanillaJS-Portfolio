@@ -1,22 +1,47 @@
 // serverless-function-download.js
 
 const fs = require('fs');
+const path = require('path');
+const sqlite3 = require('sqlite3').verbose();
 
-const downloadCountFilePath = 'downloadCount.json';
+const dbFilePath = path.join(__dirname, 'data', 'downloadCount.db');
 
-let downloadCount;
-
-// Read the download count from the storage (e.g., a file) on server startup
-try {
-  const data = fs.readFileSync(downloadCountFilePath, 'utf8');
-  downloadCount = parseInt(data, 10);
-  if (isNaN(downloadCount)) {
-    downloadCount = 0;
+// Create and open the SQLite database connection
+const db = new sqlite3.Database(dbFilePath, (err) => {
+  if (err) {
+    console.error('Error opening database:', err);
+  } else {
+    console.log('Connected to the database.');
   }
-} catch (err) {
-  console.error('Error reading download count file:', err);
-  downloadCount = 0;
-}
+});
+
+// Create a table to store the download count if it doesn't exist
+db.run(`
+  CREATE TABLE IF NOT EXISTS download_counts (
+    id INTEGER PRIMARY KEY,
+    count INTEGER DEFAULT 0
+  );
+`);
+
+let downloadCount = 0;
+
+// Read the download count from the database on server startup
+db.get('SELECT count FROM download_counts WHERE id = 1', (err, row) => {
+  if (err) {
+    console.error('Error reading download count from the database:', err);
+  } else {
+    if (row) {
+      downloadCount = row.count;
+    } else {
+      // Insert the initial download count into the database
+      db.run('INSERT INTO download_counts (id, count) VALUES (?, ?)', [1, downloadCount], (err) => {
+        if (err) {
+          console.error('Error inserting initial download count:', err);
+        }
+      });
+    }
+  }
+});
 
 exports.handler = async function (event, context) {
   if (event.httpMethod === 'GET') {
@@ -32,13 +57,12 @@ exports.handler = async function (event, context) {
     downloadCount++;
     console.log('Incremented downloadCount:', downloadCount); // Log the incremented count for debugging
 
-    // Update the download count in the storage (e.g., a file)
-    try {
-      fs.writeFileSync(downloadCountFilePath, downloadCount.toString(), 'utf8');
-      console.log('Download count updated successfully:', downloadCount); // Log the updated count for debugging
-    } catch (err) {
-      console.error('Error updating download count:', err);
-    }
+    // Update the download count in the database
+    db.run('UPDATE download_counts SET count = ? WHERE id = ?', [downloadCount, 1], (err) => {
+      if (err) {
+        console.error('Error updating download count in the database:', err);
+      }
+    });
 
     return {
       statusCode: 200,
