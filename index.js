@@ -108,8 +108,6 @@ function applyDarkTheme() {
   viewsCounter.style.color = '#16213E'
   downloadsCounter.style.backgroundColor = 'white'
   downloadsCounter.style.color = '#16213E'
-
-
 }
 
 function removeDarkTheme() {
@@ -128,8 +126,6 @@ function removeDarkTheme() {
   viewsCounter.style.color = 'white'
   downloadsCounter.style.backgroundColor = '#16213E'
   downloadsCounter.style.color = 'white'
-
-
 }
 
 function toggleTheme() {
@@ -185,22 +181,3 @@ updateViewCount();
 updateDownloadCount(); // Initialize the download count on page load
 
 document.getElementById("button_on_hero").addEventListener('click', incrementDownloadCount);
-
-// const downloadFunctionEndpoint = '/.netlify/functions/downloadCount';
-
-// // Function to update download count on the client-side
-// async function updateDownloadCount() {
-//   console.log('a')
-//   try {
-//     const response = await fetch(downloadFunctionEndpoint);
-//     const data = await response.json();
-//     const downloadCount = data.downloadCount;
-//     document.getElementById('download-count').textContent = downloadCount;
-//   } catch (error) {
-//     console.error('Error updating download count:', error);
-//   }
-// }
-
-// // Call the function to update download count when the resume link is clicked
-// const resumeDownloadLink = document.getElementById('button_on_hero');
-// resumeDownloadLink.addEventListener('click', updateDownloadCount);
