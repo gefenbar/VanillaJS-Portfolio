@@ -6,7 +6,7 @@ const downloadCountFilePath = 'downloadCount.json';
 
 let downloadCount = 0;
 
-// Read the download count from the storage (e.g., a file) on server startup
+// Read the initial download count from the storage (e.g., a file) on server startup
 fs.readFile(downloadCountFilePath, 'utf8', (err, data) => {
   if (!err) {
     downloadCount = Number(data);
