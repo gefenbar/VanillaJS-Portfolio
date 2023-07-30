@@ -27,10 +27,13 @@ exports.handler = async function (event, context) {
     };
   } else if (event.httpMethod === 'POST') {
     viewCount++;
+    console.log('Incremented viewCount:', viewCount); // Log the incremented count for debugging
     // Update the view count in the storage (e.g., a file)
     fs.writeFile(viewCountFilePath, viewCount.toString(), 'utf8', (err) => {
       if (err) {
         console.error('Error updating view count:', err);
+      } else {
+        console.log('View count updated successfully:', viewCount); // Log the updated count for debugging
       }
     });
     return {
