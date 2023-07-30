@@ -1,30 +1,26 @@
-const fs = require('fs');
-const path = require('path');
-
-const viewCountFile = path.join(__dirname, 'viewCount.json');
-let viewCount = 0;
-
-// Read the current view count from the file
-fs.readFile(viewCountFile, 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading viewCount file:', err);
-  } else {
-    viewCount = JSON.parse(data).count;
-  }
-});
+const db = require('./db');
 
 exports.handler = async (event, context) => {
   if (event.httpMethod === "GET") {
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ viewCount }),
-    };
-  } else {
-    viewCount++;
-    // Write the updated count to the file
-    fs.writeFile(viewCountFile, JSON.stringify({ count: viewCount }), 'utf8', (err) => {
+    db.get('SELECT count FROM counts WHERE name = ?', 'viewCount', (err, row) => {
       if (err) {
-        console.error('Error writing viewCount file:', err);
+        console.error('Error reading viewCount:', err);
+        return {
+          statusCode: 500,
+          body: JSON.stringify({ error: 'Error reading viewCount' }),
+        };
+      } else {
+        const viewCount = row.count;
+        return {
+          statusCode: 200,
+          body: JSON.stringify({ viewCount }),
+        };
+      }
+    });
+  } else {
+    db.run('UPDATE counts SET count = count + 1 WHERE name = ?', 'viewCount', (err) => {
+      if (err) {
+        console.error('Error updating viewCount:', err);
       }
     });
     return {
