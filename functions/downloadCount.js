@@ -1,4 +1,19 @@
-let downloadCount = 0;
+// serverless-function-download.js
+
+const fs = require('fs');
+
+const downloadCountFilePath = 'downloadCount.json';
+
+let downloadCount; // No need to set an initial value
+
+// Read the initial download count from the storage (e.g., a file) on server startup
+fs.readFile(downloadCountFilePath, 'utf8', (err, data) => {
+  if (!err) {
+    downloadCount = parseInt(data, 10); // Parse the data as an integer
+  } else {
+    downloadCount = 0; // Set an initial value if the file is not found or an error occurs
+  }
+});
 
 exports.handler = async function (event, context) {
   if (event.httpMethod === 'GET') {
@@ -12,6 +27,12 @@ exports.handler = async function (event, context) {
     };
   } else if (event.httpMethod === 'POST') {
     downloadCount++;
+    // Update the download count in the storage (e.g., a file)
+    fs.writeFile(downloadCountFilePath, downloadCount.toString(), 'utf8', (err) => {
+      if (err) {
+        console.error('Error updating download count:', err);
+      }
+    });
     return {
       statusCode: 200,
       body: JSON.stringify({ downloadCount }),
