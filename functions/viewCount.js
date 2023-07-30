@@ -1,29 +1,20 @@
-// serverless-function-view.js
+// serverless-function.js
 
 const fs = require('fs');
 
 const viewCountFilePath = 'viewCount.json';
-console.log("test")
+
 let viewCount = 0;
 
-// Read the initial view count from the storage (e.g., a file) on server startup
+// Read the view count from the storage (e.g., a file) on server startup
 fs.readFile(viewCountFilePath, 'utf8', (err, data) => {
   if (!err) {
-    viewCount = parseInt(data, 10); // Parse the data as an integer
+    viewCount = Number(data);
   }
 });
 
 exports.handler = async function (event, context) {
   if (event.httpMethod === 'GET') {
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ viewCount }),
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
-    };
-  } else if (event.httpMethod === 'POST') {
     viewCount++;
     // Update the view count in the storage (e.g., a file)
     fs.writeFile(viewCountFilePath, viewCount.toString(), 'utf8', (err) => {
@@ -31,6 +22,7 @@ exports.handler = async function (event, context) {
         console.error('Error updating view count:', err);
       }
     });
+
     return {
       statusCode: 200,
       body: JSON.stringify({ viewCount }),
