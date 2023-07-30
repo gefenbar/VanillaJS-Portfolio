@@ -1,32 +1,14 @@
 // serverless-function.js
 
-const fs = require('fs');
+const DataStore = require('data-store');
+const viewCountStore = new DataStore({ path: 'viewCount.json' });
 
-const viewCountFilePath = 'viewCount.json';
-
-let viewCount;
-
-// Read the view count from the storage (e.g., a file) on server startup
-try {
-  const data = fs.readFileSync(viewCountFilePath, 'utf8');
-  viewCount = parseInt(data, 10);
-  if (isNaN(viewCount)) {
-    viewCount = 0;
-  }
-} catch (err) {
-  console.error('Error reading view count file:', err);
-  viewCount = 0;
-}
+let viewCount = viewCountStore.get('count', 0);
 
 exports.handler = async function (event, context) {
   if (event.httpMethod === 'GET') {
     viewCount++;
-    // Update the view count in the storage (e.g., a file)
-    try {
-      fs.writeFileSync(viewCountFilePath, viewCount.toString(), 'utf8');
-    } catch (err) {
-      console.error('Error updating view count:', err);
-    }
+    viewCountStore.set('count', viewCount); // Update the view count in the data store
 
     return {
       statusCode: 200,

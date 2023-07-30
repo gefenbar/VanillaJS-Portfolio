@@ -4,14 +4,19 @@ const fs = require('fs');
 
 const downloadCountFilePath = 'downloadCount.json';
 
-let downloadCount = 0;
+let downloadCount;
 
-// Read the initial download count from the storage (e.g., a file) on server startup
-fs.readFile(downloadCountFilePath, 'utf8', (err, data) => {
-  if (!err) {
-    downloadCount = Number(data);
+// Read the download count from the storage (e.g., a file) on server startup
+try {
+  const data = fs.readFileSync(downloadCountFilePath, 'utf8');
+  downloadCount = parseInt(data, 10);
+  if (isNaN(downloadCount)) {
+    downloadCount = 0;
   }
-});
+} catch (err) {
+  console.error('Error reading download count file:', err);
+  downloadCount = 0;
+}
 
 exports.handler = async function (event, context) {
   if (event.httpMethod === 'GET') {
@@ -25,12 +30,16 @@ exports.handler = async function (event, context) {
     };
   } else if (event.httpMethod === 'POST') {
     downloadCount++;
+    console.log('Incremented downloadCount:', downloadCount); // Log the incremented count for debugging
+
     // Update the download count in the storage (e.g., a file)
-    fs.writeFile(downloadCountFilePath, downloadCount.toString(), 'utf8', (err) => {
-      if (err) {
-        console.error('Error updating download count:', err);
-      }
-    });
+    try {
+      fs.writeFileSync(downloadCountFilePath, downloadCount.toString(), 'utf8');
+      console.log('Download count updated successfully:', downloadCount); // Log the updated count for debugging
+    } catch (err) {
+      console.error('Error updating download count:', err);
+    }
+
     return {
       statusCode: 200,
       body: JSON.stringify({ downloadCount }),
