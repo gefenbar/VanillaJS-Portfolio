@@ -1,4 +1,4 @@
-// serverless-function-view.js
+// serverless-function.js
 
 const fs = require('fs');
 
@@ -15,22 +15,6 @@ fs.readFile(viewCountFilePath, 'utf8', (err, data) => {
 
 exports.handler = async function (event, context) {
   if (event.httpMethod === 'GET') {
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ viewCount }),
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
-    };
-  } else if (event.httpMethod === 'POST') {
-    viewCount++;
-    // Update the view count in the storage (e.g., a file)
-    fs.writeFile(viewCountFilePath, viewCount.toString(), 'utf8', (err) => {
-      if (err) {
-        console.error('Error updating view count:', err);
-      }
-    });
     return {
       statusCode: 200,
       body: JSON.stringify({ viewCount }),
