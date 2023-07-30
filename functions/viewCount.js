@@ -1,26 +1,19 @@
 // serverless-function.js
 
 const fs = require('fs');
-const lockFile = require('lockfile');
 
 const viewCountFilePath = 'viewCount.json';
-const lockFilePath = 'viewCount.lock';
 
-let viewCount = 0;
+let viewCount;
 
 // Read the view count from the storage (e.g., a file) on server startup
 try {
-  lockFile.lockSync(lockFilePath); // Acquire the lock to prevent conflicts
   const data = fs.readFileSync(viewCountFilePath, 'utf8');
-  viewCount = parseInt(data, 10);
-  if (isNaN(viewCount)) {
-    viewCount = 0;
-  }
+  const jsonData = JSON.parse(data);
+  viewCount = jsonData.viewCount || 0;
 } catch (err) {
   console.error('Error reading view count file:', err);
   viewCount = 0;
-} finally {
-  lockFile.unlockSync(lockFilePath); // Release the lock
 }
 
 exports.handler = async function (event, context) {
@@ -28,12 +21,10 @@ exports.handler = async function (event, context) {
     viewCount++;
     // Update the view count in the storage (e.g., a file)
     try {
-      lockFile.lockSync(lockFilePath); // Acquire the lock to prevent conflicts
-      fs.writeFileSync(viewCountFilePath, viewCount.toString(), 'utf8');
+      const jsonData = { viewCount };
+      fs.writeFileSync(viewCountFilePath, JSON.stringify(jsonData), 'utf8');
     } catch (err) {
       console.error('Error updating view count:', err);
-    } finally {
-      lockFile.unlockSync(lockFilePath); // Release the lock
     }
 
     return {
