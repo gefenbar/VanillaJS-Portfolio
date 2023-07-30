@@ -4,14 +4,12 @@ const fs = require('fs');
 
 const downloadCountFilePath = 'downloadCount.json';
 
-let downloadCount; // No need to set an initial value
+let downloadCount = 0;
 
 // Read the initial download count from the storage (e.g., a file) on server startup
 fs.readFile(downloadCountFilePath, 'utf8', (err, data) => {
   if (!err) {
-    downloadCount = parseInt(data, 10); // Parse the data as an integer
-  } else {
-    downloadCount = 0; // Set an initial value if the file is not found or an error occurs
+    downloadCount = Number(data);
   }
 });
 

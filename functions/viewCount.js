@@ -7,12 +7,11 @@ const viewCountFilePath = 'viewCount.json';
 let viewCount = 0;
 
 // Read the initial view count from the storage (e.g., a file) on server startup
-try {
-  const data = fs.readFileSync(viewCountFilePath, 'utf8');
-  viewCount = parseInt(data, 10);
-} catch (err) {
-  console.error('Error reading view count file:', err);
-}
+fs.readFile(viewCountFilePath, 'utf8', (err, data) => {
+  if (!err) {
+    viewCount = Number(data);
+  }
+});
 
 exports.handler = async function (event, context) {
   if (event.httpMethod === 'GET') {
@@ -26,16 +25,12 @@ exports.handler = async function (event, context) {
     };
   } else if (event.httpMethod === 'POST') {
     viewCount++;
-    console.log('Incremented viewCount:', viewCount); // Log the incremented count for debugging
-
     // Update the view count in the storage (e.g., a file)
-    try {
-      fs.writeFileSync(viewCountFilePath, viewCount.toString(), 'utf8');
-      console.log('View count updated successfully:', viewCount); // Log the updated count for debugging
-    } catch (err) {
-      console.error('Error updating view count:', err);
-    }
-
+    fs.writeFile(viewCountFilePath, viewCount.toString(), 'utf8', (err) => {
+      if (err) {
+        console.error('Error updating view count:', err);
+      }
+    });
     return {
       statusCode: 200,
       body: JSON.stringify({ viewCount }),
