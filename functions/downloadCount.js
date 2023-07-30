@@ -1,44 +1,32 @@
-const db = require('./db');
+const fs = require('fs');
+const path = require('path');
+
+const downloadCountFile = path.join(__dirname, 'downloadCount.json');
+let downloadCount = 0;
+
+try {
+  const data = fs.readFileSync(downloadCountFile, 'utf8');
+  downloadCount = JSON.parse(data).count;
+} catch (error) {
+  console.error('Error reading downloadCount file:', error);
+}
 
 exports.handler = async (event, context) => {
-  try {
-    if (event.httpMethod === 'GET') {
-      db.get('SELECT count FROM counts WHERE name = ?', 'downloadCount', (err, row) => {
-        if (err) {
-          console.error('Error reading downloadCount:', err);
-          return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'Error reading downloadCount' }),
-          };
-        } else {
-          const downloadCount = row.count;
-          return {
-            statusCode: 200,
-            body: JSON.stringify({ downloadCount }),
-          };
-        }
-      });
-    } else {
-      db.run('UPDATE counts SET count = count + 1 WHERE name = ?', 'downloadCount', (err) => {
-        if (err) {
-          console.error('Error updating downloadCount:', err);
-          return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'Error updating downloadCount' }),
-          };
-        } else {
-          return {
-            statusCode: 200,
-            body: JSON.stringify({ message: 'Download count incremented successfully.' }),
-          };
-        }
-      });
-    }
-  } catch (error) {
-    console.error('Internal server error:', error);
+  if (event.httpMethod === "GET") {
     return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Internal server error' }),
+      statusCode: 200,
+      body: JSON.stringify({ downloadCount }),
+    };
+  } else {
+    downloadCount++;
+    try {
+      fs.writeFileSync(downloadCountFile, JSON.stringify({ count: downloadCount }), 'utf8');
+    } catch (error) {
+      console.error('Error writing downloadCount file:', error);
+    }
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "Download count incremented successfully." }),
     };
   }
 };

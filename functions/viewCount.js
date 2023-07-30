@@ -1,44 +1,32 @@
-const db = require('./db');
+const fs = require('fs');
+const path = require('path');
+
+const viewCountFile = path.join(__dirname, 'viewCount.json');
+let viewCount = 0;
+
+try {
+  const data = fs.readFileSync(viewCountFile, 'utf8');
+  viewCount = JSON.parse(data).count;
+} catch (error) {
+  console.error('Error reading viewCount file:', error);
+}
 
 exports.handler = async (event, context) => {
-  try {
-    if (event.httpMethod === 'GET') {
-      db.get('SELECT count FROM counts WHERE name = ?', 'viewCount', (err, row) => {
-        if (err) {
-          console.error('Error reading viewCount:', err);
-          return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'Error reading viewCount' }),
-          };
-        } else {
-          const viewCount = row.count;
-          return {
-            statusCode: 200,
-            body: JSON.stringify({ viewCount }),
-          };
-        }
-      });
-    } else {
-      db.run('UPDATE counts SET count = count + 1 WHERE name = ?', 'viewCount', (err) => {
-        if (err) {
-          console.error('Error updating viewCount:', err);
-          return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'Error updating viewCount' }),
-          };
-        } else {
-          return {
-            statusCode: 200,
-            body: JSON.stringify({ message: 'View count incremented successfully.' }),
-          };
-        }
-      });
-    }
-  } catch (error) {
-    console.error('Internal server error:', error);
+  if (event.httpMethod === "GET") {
     return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Internal server error' }),
+      statusCode: 200,
+      body: JSON.stringify({ viewCount }),
+    };
+  } else {
+    viewCount++;
+    try {
+      fs.writeFileSync(viewCountFile, JSON.stringify({ count: viewCount }), 'utf8');
+    } catch (error) {
+      console.error('Error writing viewCount file:', error);
+    }
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "View count incremented successfully." }),
     };
   }
 };
