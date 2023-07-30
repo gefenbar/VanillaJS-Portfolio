@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 const viewCountFilePath = 'viewCount.json';
-
+console.log("test")
 let viewCount = 0;
 
 // Read the initial view count from the storage (e.g., a file) on server startup
