@@ -4,12 +4,17 @@ const fs = require('fs');
 
 const viewCountFilePath = 'viewCount.json';
 
-let viewCount = 0;
+let viewCount;
 
 // Read the view count from the storage (e.g., a file) on server startup
 fs.readFile(viewCountFilePath, 'utf8', (err, data) => {
   if (!err) {
-    viewCount = Number(data);
+    viewCount = parseInt(data, 10);
+    if (isNaN(viewCount)) {
+      viewCount = 0;
+    }
+  } else {
+    viewCount = 0;
   }
 });
 
