@@ -29,16 +29,17 @@ exports.handler = async function (event, context) {
     fs.writeFile(viewCountFilePath, viewCount.toString(), 'utf8', (err) => {
       if (err) {
         console.error('Error updating view count:', err);
+      } else {
+        return {
+          statusCode: 200,
+          body: JSON.stringify({ viewCount }),
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Content-Type',
+          },
+        };
       }
     });
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ viewCount }),
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
-    };
   } else {
     return {
       statusCode: 405,
