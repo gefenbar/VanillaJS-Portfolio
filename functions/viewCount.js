@@ -3,7 +3,7 @@ const path = require('path');
 
 const viewCountFile = path.join(__dirname, 'viewCount.json');
 let viewCount = 0;
-
+console.log('viewCount '+ viewCount)
 try {
   const data = fs.readFileSync(viewCountFile, 'utf8');
   viewCount = JSON.parse(data).count;
