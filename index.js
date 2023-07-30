@@ -142,9 +142,8 @@ function toggleTheme() {
 const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
 
-// Assuming the functions are deployed under the same domain as the website
-const functionEndpointView = 'https://gefenbar.netlify.app/.netlify/functions/viewCount';
-const functionEndpointDownload = 'https://gefenbar.netlify.app/.netlify/functions/downloadCount';
+const functionEndpointView = '/.netlify/functions/viewCount';
+const functionEndpointDownload = '/.netlify/functions/downloadCount';
 
 async function updateViewCount() {
   try {
