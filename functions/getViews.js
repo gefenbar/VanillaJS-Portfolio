@@ -1,4 +1,3 @@
-// functions/getViews.js
 
 const faunadb = require('faunadb');
 const { GET, Collection, Lambda, Match, Index } = faunadb.query;
