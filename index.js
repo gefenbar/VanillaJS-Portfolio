@@ -143,31 +143,31 @@ const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
 
 
-// path_to_your_remote_server_js_code.js (loaded from your remote server)
-document.addEventListener('DOMContentLoaded', function () {
-  // Fetch the initial view count when the website loads
-  fetch('/.netlify/functions/getViews')
-    .then(response => response.json())
-    .then(data => {
-      const viewsCountElement = document.getElementById('view-count');
-      viewsCountElement.textContent = data.views; // Update the view count on the page
-    });
+// // path_to_your_remote_server_js_code.js (loaded from your remote server)
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Fetch the initial view count when the website loads
+//   fetch('/.netlify/functions/getViews')
+//     .then(response => response.json())
+//     .then(data => {
+//       const viewsCountElement = document.getElementById('view-count');
+//       viewsCountElement.textContent = data.views; // Update the view count on the page
+//     });
 
-  // Add an event listener to the download button
-  const downloadButton = document.getElementById('button_on_hero');
-  downloadButton.addEventListener('click', function () {
-    // Send a POST request to the backend to increase the download count
-    fetch('/.netlify/functions/incrementDownloads', {
-      method: 'POST',
-    });
-    // Optional: You can also update the download count on the page immediately.
-    // However, it's recommended to fetch the updated count from the server
-    // after the POST request is completed, in case of any delays or errors.
-    const downloadsCountElement = document.getElementById('download-count');
-    const currentCount = parseInt(downloadsCountElement.textContent);
-    downloadsCountElement.textContent = currentCount + 1;
-  });
-});
+//   // Add an event listener to the download button
+//   const downloadButton = document.getElementById('button_on_hero');
+//   downloadButton.addEventListener('click', function () {
+//     // Send a POST request to the backend to increase the download count
+//     fetch('/.netlify/functions/incrementDownloads', {
+//       method: 'POST',
+//     });
+//     // Optional: You can also update the download count on the page immediately.
+//     // However, it's recommended to fetch the updated count from the server
+//     // after the POST request is completed, in case of any delays or errors.
+//     const downloadsCountElement = document.getElementById('download-count');
+//     const currentCount = parseInt(downloadsCountElement.textContent);
+//     downloadsCountElement.textContent = currentCount + 1;
+//   });
+// });
 
 
 // 

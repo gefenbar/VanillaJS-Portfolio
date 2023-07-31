@@ -1,27 +1,27 @@
-const faunadb = require('faunadb');
-const { Update, Match, Index, Lambda, Add } = faunadb.query;
+// const faunadb = require('faunadb');
+// const { Update, Match, Index, Lambda, Add } = faunadb.query;
 
-const client = new faunadb.Client({
-  secret: process.env.FAUNA_SECRET,
-});
+// const client = new faunadb.Client({
+//   secret: process.env.FAUNA_SECRET,
+// });
 
-exports.handler = async function (event, context) {
-  try {
-    await client.query(
-      Update(
-        Match(Index('downloads_count')),
-        { data: { count: Add(1, Lambda('x', 'x')) } }
-      )
-    );
+// exports.handler = async function (event, context) {
+//   try {
+//     await client.query(
+//       Update(
+//         Match(Index('downloads_count')),
+//         { data: { count: Add(1, Lambda('x', 'x')) } }
+//       )
+//     );
 
-    return {
-      statusCode: 204,
-      body: '',
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Server error' }),
-    };
-  }
-};
+//     return {
+//       statusCode: 204,
+//       body: '',
+//     };
+//   } catch (error) {
+//     return {
+//       statusCode: 500,
+//       body: JSON.stringify({ error: 'Server error' }),
+//     };
+//   }
+// };
