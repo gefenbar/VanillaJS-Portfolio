@@ -8,7 +8,7 @@ const client = new faunadb.Client({
 exports.handler = async function (event, context) {
   try {
     await client.query(
-      Update(Match(Index('downloads_count')), { data: { count: Add(1, Lambda('x', 'x')) } })
+      Get(Match(Index('downloads_count')), { data: { count: Add(1, Lambda('x', 'x')) } })
     );
 
     return {
