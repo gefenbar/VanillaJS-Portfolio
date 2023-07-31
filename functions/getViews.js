@@ -1,6 +1,5 @@
-// getViews
 const faunadb = require('faunadb');
-const { Get, Collection, Match, Index } = faunadb.query;
+const { Get, Match, Index } = faunadb.query;
 
 const client = new faunadb.Client({
   secret: process.env.FAUNA_SECRET,

@@ -1,5 +1,5 @@
 const faunadb = require('faunadb');
-const { Update, Collection, Lambda, Match, Index, Add } = faunadb.query;
+const { Update, Match, Index, Lambda, Add } = faunadb.query;
 
 const client = new faunadb.Client({
   secret: process.env.FAUNA_SECRET,
