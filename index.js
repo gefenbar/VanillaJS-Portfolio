@@ -146,7 +146,7 @@ toggleBtn.addEventListener("click", toggleTheme);
 // path_to_your_remote_server_js_code.js (loaded from your remote server)
 document.addEventListener('DOMContentLoaded', function () {
   // Fetch the initial view count when the website loads
-  fetch('functions/getViews')
+  fetch('/.netlify/functions/getViews.js')
     .then(response => response.json())
     .then(data => {
       const viewsCountElement = document.getElementById('view-count');
@@ -157,10 +157,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const downloadButton = document.getElementById('button_on_hero');
   downloadButton.addEventListener('click', function () {
     // Send a POST request to the backend to increase the download count
-    fetch('/functions/increasmentDownloads', {
+    fetch('/.netlify/functions/incrementDownloads.js', {
       method: 'POST',
     });
-
     // Optional: You can also update the download count on the page immediately.
     // However, it's recommended to fetch the updated count from the server
     // after the POST request is completed, in case of any delays or errors.
@@ -171,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
+// 
 
 
 
