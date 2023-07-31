@@ -142,44 +142,110 @@ function toggleTheme() {
 const toggleBtn = document.querySelector("#dark_light_button");
 toggleBtn.addEventListener("click", toggleTheme);
 
+
+// path_to_your_remote_server_js_code.js (loaded from your remote server)
+document.addEventListener('DOMContentLoaded', function () {
+  // Fetch the initial view count when the website loads
+  fetch('/api/views')
+    .then(response => response.json())
+    .then(data => {
+      const viewsCountElement = document.getElementById('view-count');
+      viewsCountElement.textContent = data.views; // Update the view count on the page
+    });
+
+  // Add an event listener to the download button
+  const downloadButton = document.getElementById('button_on_hero');
+  downloadButton.addEventListener('click', function () {
+    // Send a POST request to the backend to increase the download count
+    fetch('/api/downloads', {
+      method: 'POST',
+    });
+
+    // Optional: You can also update the download count on the page immediately.
+    // However, it's recommended to fetch the updated count from the server
+    // after the POST request is completed, in case of any delays or errors.
+    const downloadsCountElement = document.getElementById('download-count');
+    const currentCount = parseInt(downloadsCountElement.textContent);
+    downloadsCountElement.textContent = currentCount + 1;
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Assuming the functions are deployed under the same domain as the website
 
-const functionEndpointView = '/.netlify/functions/viewCount';
-const functionEndpointDownload = '/.netlify/functions/downloadCount';
+// const functionEndpointView = '/.netlify/functions/viewCount';
+// const functionEndpointDownload = '/.netlify/functions/downloadCount';
 
-async function updateViewCount() {
-  try {
-    const response = await fetch(functionEndpointView);
-    const data = await response.json();
-    const viewCount = data.viewCount;
-    document.getElementById('view-count').textContent = viewCount;
-  } catch (error) {
-    console.error('Error updating view count:', error);
-  }
-}
+// async function updateViewCount() {
+//   try {
+//     const response = await fetch(functionEndpointView);
+//     const data = await response.json();
+//     const viewCount = data.viewCount;
+//     document.getElementById('view-count').textContent = viewCount;
+//   } catch (error) {
+//     console.error('Error updating view count:', error);
+//   }
+// }
 
-async function updateDownloadCount() {
-  try {
-    const response = await fetch(functionEndpointDownload);
-    const data = await response.json();
-    const downloadCount = data.downloadCount;
-    document.getElementById('download-count').textContent = downloadCount;
-  } catch (error) {
-    console.error('Error updating download count:', error);
-  }
-}
+// async function updateDownloadCount() {
+//   try {
+//     const response = await fetch(functionEndpointDownload);
+//     const data = await response.json();
+//     const downloadCount = data.downloadCount;
+//     document.getElementById('download-count').textContent = downloadCount;
+//   } catch (error) {
+//     console.error('Error updating download count:', error);
+//   }
+// }
 
-async function incrementDownloadCount() {
-  try {
-    await fetch(functionEndpointDownload, { method: 'POST' });
-    updateDownloadCount(); // Update the download count after the increment
-  } catch (error) {
-    console.error('Error incrementing download count:', error);
-  }
-}
+// async function incrementDownloadCount() {
+//   try {
+//     await fetch(functionEndpointDownload, { method: 'POST' });
+//     updateDownloadCount(); // Update the download count after the increment
+//   } catch (error) {
+//     console.error('Error incrementing download count:', error);
+//   }
+// }
 
-// Call the functions to update view and download counts on page load
-updateViewCount();
-updateDownloadCount(); // Initialize the download count on page load
+// // Call the functions to update view and download counts on page load
+// updateViewCount();
+// updateDownloadCount(); // Initialize the download count on page load
 
-document.getElementById("button_on_hero").addEventListener('click', incrementDownloadCount);
+// document.getElementById("button_on_hero").addEventListener('click', incrementDownloadCount);
