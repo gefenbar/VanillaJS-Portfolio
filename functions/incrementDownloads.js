@@ -1,4 +1,4 @@
-
+//functions/incrementDownloads.js
 const faunadb = require('faunadb');
 const { Update, Collection, Lambda, Match, Index } = faunadb.query;
 
