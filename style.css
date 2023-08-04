@@ -425,8 +425,6 @@ body {
     border: 2px solid #ccc;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-    /* max-width: 100px; */
-    /* width: 50%; */
 }
 
 #experience h1 {
@@ -453,14 +451,10 @@ details summary {
     font-size: 2rem;
     cursor: pointer;
     outline: none;
-    /* padding: 0; */
-    /* margin: 0; */
-    /* remove default focus style */
 }
 
 details[open] summary {
     font-weight: bold;
-    /* highlight the open summary */
 }
 
 #experience p {
@@ -662,7 +656,8 @@ h5 {
 }
 
 /* CSS for Views Count Section */
-#view-count, #download-count {
+#view-count,
+#download-count {
     font-size: 24px;
     font-weight: bold;
     color: #ff4a57;
@@ -697,80 +692,3 @@ p span {
     /* Dark blue color for the "Loading..." text */
     font-style: italic;
 }
-
-/* CSS for "Views" section */
-#views-container {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  #view-text {
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 8px;
-  }
-  
-  #view-count {
-    display: inline-block;
-    background-color: #ff4a57;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  #view-count.loading {
-    background-color: #16213E;
-  }
-  
-  #view-count:hover {
-    background-color: #ff0f0f;
-    transform: scale(1.05);
-  }
-  
-  /* CSS for "Downloads" section */
-  #downloads-container {
-    position: fixed;
-    bottom: 70px; /* Adjust the vertical position as needed */
-    left: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  #download-text {
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 8px;
-  }
-  
-  #download-count {
-    display: inline-block;
-    background-color: #ff4a57;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  #download-count.loading {
-    background-color: #16213E;
-  }
-  
-  #download-count:hover {
-    background-color: #ff0f0f;
-    transform: scale(1.05);
-  }
-  
-
-  
