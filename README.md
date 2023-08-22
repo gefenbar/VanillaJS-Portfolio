@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This repository contains code for my personal one page portfolio website to showcase my projects and skills as a web developer. 
+This repository contains code for my personal one page portfolio website to showcase my projects and skills as a Software Developer. 
 
 ## About
 
