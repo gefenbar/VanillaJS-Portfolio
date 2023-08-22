@@ -1,5 +1,3 @@
-You're right, my previous READMEs assumed a multi-page website, but you mentioned this is a single page portfolio. Here is an updated README for a one page portfolio site:
-
 # Portfolio Website
 
 This repository contains code for my personal one page portfolio website to showcase my projects and skills as a web developer. 
