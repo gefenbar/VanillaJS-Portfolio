@@ -33,9 +33,7 @@ body {
 /* Navigation bar styles */
 #nav {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-    /* padding: 20px; */
     position: fixed;
     top: 0;
     left: 0;
@@ -121,7 +119,6 @@ body {
     height: auto;
 }
 
-/* Hero section styles */
 #hero_section {
     position: relative;
     height: 100vh;
@@ -463,7 +460,6 @@ details[open] summary {
     line-height: 1.5;
 }
 
-/* Footer */
 footer {
     background-color: #222;
     color: #ccc;
@@ -623,11 +619,6 @@ h5 {
         width: 100%;
 
     }
-
-    /* #about_me_text {
-        margin-right: 2rem;
-    } */
-
 
     #button_on_hero {
         margin-top: -3vh;

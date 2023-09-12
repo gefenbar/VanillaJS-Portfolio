@@ -104,10 +104,10 @@ function applyDarkTheme() {
   experience.classList.add("dark")
   themeBtn.style.backgroundColor = 'white'
   themeBtn.style.color = '#16213E'
-  viewsCounter.style.backgroundColor = 'white'
-  viewsCounter.style.color = '#16213E'
-  downloadsCounter.style.backgroundColor = 'white'
-  downloadsCounter.style.color = '#16213E'
+  // viewsCounter.style.backgroundColor = 'white'
+  // viewsCounter.style.color = '#16213E'
+  // downloadsCounter.style.backgroundColor = 'white'
+  // downloadsCounter.style.color = '#16213E'
 }
 
 function removeDarkTheme() {
@@ -122,10 +122,10 @@ function removeDarkTheme() {
   experience.classList.remove("dark")
   themeBtn.style.backgroundColor = '#16213E'
   themeBtn.style.color = 'white'
-  viewsCounter.style.backgroundColor = '#16213E'
-  viewsCounter.style.color = 'white'
-  downloadsCounter.style.backgroundColor = '#16213E'
-  downloadsCounter.style.color = 'white'
+  // viewsCounter.style.backgroundColor = '#16213E'
+  // viewsCounter.style.color = 'white'
+  // downloadsCounter.style.backgroundColor = '#16213E'
+  // downloadsCounter.style.color = 'white'
 }
 
 function toggleTheme() {
